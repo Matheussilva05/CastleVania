@@ -18,6 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Jogo.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Jogo.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -132,16 +138,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\include\Jogo.hpp" />
-    <ClInclude Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\include\Principal.hpp" />
-    <ClInclude Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\include\stdafx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\src\Jogo.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\src\main.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\src\Principal.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

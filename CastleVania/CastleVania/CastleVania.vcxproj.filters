@@ -15,24 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\include\Jogo.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\include\Principal.hpp">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\include\stdafx.h">
+    <ClInclude Include="Jogo.hpp">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\src\Jogo.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\src\main.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Documents\UTFPR - MATERIAIS\2023_1\tecprog\MyProject\CastleVania++\mygame-Implementa-o_Classes_Anima-o-stdafx-id_e_sprites\src\Principal.cpp">
+    <ClCompile Include="Jogo.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
   </ItemGroup>
