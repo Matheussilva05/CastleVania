@@ -1,4 +1,4 @@
-#include "ConstrutorNivel.hpp"
+#include "../../include/Nivel/ConstrutorNivel.hpp"
 ConstrutorNivel::ConstrutorNivel() {
     pJogador1 = NULL;
     pJogador2 = NULL;
@@ -114,10 +114,10 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
     srand(time(NULL));
     ifstream file;
     if (numnvl <= 1) {
-        file.open("./assets/Nivels/PrimeiroNivel.txt");
+        file.open("./imagens/MAPA/PrimeiroNivel.txt");
         nvl = new Nivel(PATH_PLANODEFUNDO_PLACEHOLDER, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     } else if (numnvl == 2) {
-        file.open("./assets/Nivels/SegundoNivel.txt");
+        file.open("./imagens/MAPA/SegundoNivel.txt");
         nvl = new Nivel(PATH_PLANODEFUNDO_CASTELO, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     }
     if (!file) {

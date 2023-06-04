@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Personagem.hpp"
+#include "../Personagem.hpp"
 #include "BolaDeFogo.hpp"
 
 
@@ -17,8 +17,8 @@ class Jogador;
 
             class Inimigo : public Personagem{
             protected:
-                Jogador* jogador1;
-                Jogador* jogador2;
+                Jogador* pJogador1;
+                Jogador* pJogador2;
                 sf::Clock relogio;
                 float tempoTotalAtaque;
                 float ataqueTempoDeEspera;

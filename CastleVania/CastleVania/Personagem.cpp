@@ -1,5 +1,5 @@
-#include "Personagem.hpp"
-#include "Animacao.hpp"
+#include "../../include/Personagem/Personagem.hpp"
+#include "../../include/Animacao/Animacao.hpp"
 
 
         Personagem::Personagem(ID::ids id, sf::Vector2f pos, sf::Vector2f hit, int vd, int auxdano):

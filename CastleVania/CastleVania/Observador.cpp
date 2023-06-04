@@ -1,4 +1,4 @@
-#include "Observador.hpp"
+#include "../../include/Gerenciador/Observador.hpp"
 
 Observador::Observador(GerenciadorInput* pGI) {
     this->pGI = pGI;

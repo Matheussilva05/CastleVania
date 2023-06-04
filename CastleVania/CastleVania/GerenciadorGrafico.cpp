@@ -1,22 +1,19 @@
-#include "GerenciadorGrafico.hpp"
+#include "..\..\include\Gerenciador\GerenciadorGrafico.hpp"
 
 
         GerenciadorGrafico* GerenciadorGrafico::pGrafico = nullptr;
 
-        GerenciadorGrafico::GerenciadorGrafico():
-            window( new sf::RenderWindow(sf::VideoMode(800.0f, 600.0f), "Castlevania"))
-        {
-            if(window == nullptr){
-                std::cout << "Erro ao criar janela" << std::endl;
-                exit(1);
-            }
-        }
+        GerenciadorGrafico::GerenciadorGrafico() :
+        window(new sf::RenderWindow(sf::VideoMode(WIDTH, HEIGHT), "Castlevania++")),
+        view(sf::Vector2f(WIDTH / 2, HEIGHT / 2), sf::Vector2f(WIDTH, HEIGHT)),
+        mapaTextura() {
+         window->setFramerateLimit(FRAME_RATE);
+         fonte = NULL;
+         }
 
         GerenciadorGrafico::~GerenciadorGrafico(){
-            if(window){
-                delete (window);
-                window = nullptr;
-            }
+               apagarTodasTexturas();
+               delete (window);
         }
 
         GerenciadorGrafico* GerenciadorGrafico::getGerenciadorGrafico(){
@@ -48,7 +45,7 @@
            window->draw(*texto);
         }
 
-        void GerenciadorGrafico::mostraElemento(){
+        void GerenciadorGrafico::display(){
             window->display();
         }
 
@@ -98,6 +95,25 @@
         view.setCenter(pos);
         window->setView(view);
          }
+
+         /* Retorna fonte usada. */
+         sf::Font* GerenciadorGrafico::getFont() {
+         if (!fonte) {
+         fonte = new sf::Font();
+         if (!fonte->loadFromFile(FONT_PATH)) {
+            cout << "Error loading Font!" << endl;
+            exit(1);
+          }
+         }
+         return fonte;
+        }
+
+        /* Apagar todas texturas */
+        void GerenciadorGrafico::apagarTodasTexturas() {
+        std::map<const char*, sf::Texture*>::iterator it;
+        for (it = mapaTextura.begin(); it != mapaTextura.end(); ++it)
+        delete (it->second);
+}
 
 
 

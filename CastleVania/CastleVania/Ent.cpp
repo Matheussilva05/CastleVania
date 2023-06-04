@@ -1,9 +1,8 @@
 #include "../../include/Personagem/Ent.hpp"
-#include "../../include/Animacao/Animacao.hpp"
-
+#include "../../include/Animação/Animacao.hpp"
 
 Ent::Ent(ID::ids id, sf::Vector2f pos) :
-sprite(new Animacao()),
+sprite(new CastleVania::Animacao::Animacao()),
 id(id),
 posicao(pos) { }
 
@@ -20,7 +19,7 @@ void Ent::mudarPos(const sf::Vector2f pos) {
     posicao = pos;
 }
 
-Vector2f Ent::getPos() const {
+sf::Vector2f Ent::getPos() const {
     return posicao;
 }
 

@@ -4,8 +4,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
-class Animation;
-class GraphicManager;
+class Animacao;
+class GerenciadorGrafico;
 
 
         class Personagem : public Entidade {

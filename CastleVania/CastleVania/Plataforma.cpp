@@ -1,6 +1,6 @@
-#include "Plataforma.hpp"
-#include "Animacao.hpp"
-#include "GerenciadorGrafico.hpp"
+#include "../../include/Personagem/Plataforma.hpp"
+#include "../../include/Animacao/Animacao.hpp"
+#include "../../include/Gerenciador/GerenciadorGrafico.hpp"
 #include <string.h>
 
 Plataforma::Plataforma(sf::Vector2f pos, int platTipo) :
@@ -12,7 +12,7 @@ platTipo(platTipo) {
 Plataforma::~Plataforma() { }
 
 void Plataforma::atualiza(float dt) {
-    sprite->atualizar(0, dt, false, posicao);
+    sprite->atualiza(0, dt, false, posicao);
 }
 
 void Plataforma::inicializaSprite() {

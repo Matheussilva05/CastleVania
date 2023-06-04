@@ -1,9 +1,9 @@
 #pragma once
-#include "Projetil.hpp"
+#include "../Projetil.hpp"
 
 class Animacao;
 
-#define PATH_BOLADEFOGO_TEXTURA "./imagens/SPRITES/Efeitos/Bola_de_fogo/BOLADEFOGO-spritesheet/BOLADEFOGO.png"
+#define PATH_BOLADEFOGO_TEXTURA "./imagens/SPRITES/Efeitos/Boladefogo/fireball-spritesheet/BOLADEFOGO.png"
 
 #define BOLADEFOGO_LARGURA 40
 #define BOLADEFOGO_ALTURA 24

@@ -1,4 +1,4 @@
-#include "Nivel.hpp"
+#include "../../include/Nivel/Nivel.hpp"
 
 Nivel::Nivel(const char* path, Jogador* j1, Jogador* j2, sf::Vector2u nivelTamanho) :
 Ggrafico(GerenciadorGrafico::getGerenciadorGrafico()),
@@ -59,11 +59,11 @@ void Nivel::exec(float dt) {
 void Nivel::renderizaTudo() {
     centerView();
 
-    back.renderizar();
+    back.renderiza();
 
     for (int i = 0; i < _lista->getTamanho(); i++) {
         if ((*_lista)[i]->getAparece())
-            (*_lista)[i]->renderizar();
+            (*_lista)[i]->renderiza();
     }
 }
 

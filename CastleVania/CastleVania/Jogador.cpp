@@ -1,6 +1,6 @@
-#include "Jogador.hpp"
-#include "Animacao.hpp"
-#include "GerenciadorEvento.hpp"
+#include "../../../include/Personagem/Jogador/Jogador.hpp"
+#include "../../../include/Animacao/Animacao.hpp"
+#include "../../../include/Gerenciador/GerenciadorEvento.hpp"
 #include <math.h>
 
 
@@ -89,40 +89,24 @@ void Jogador::pula() {
     }
 }
 
-void Jogador::colisao(Entidade* outro, sf::Vector2f vetorColisao){
-    switch(outro->getID()){
-        case(ID::plataforma):
-            if(vetorColisao.y > 0.0f){
-                podePular = true;
-                velocidade = Vector2f(velocidade.x, 0.0f);
-            }
-            break;
-        case(ID::mago):
-            if(vetorColisao.y > 0.0f){
-                podePular = true;
-                velocidade = Vector2f(velocidade.x, 0.0f);
-            }
-            break;
-    }
-}
 
 /* atualiza a animacao */
 void Jogador::atualizaSprite(float dt) {
     /* Atacando */
     if (podeAtacar() != 0)
-        sprite->atualizar(podeAtacar(dt), dt, olhandoEsquerda(), posicao);
+        sprite->atualiza(podeAtacar(dt), dt, olhandoEsquerda(), posicao);
     /* Caindo */
     else if (velocidade.y > 150)
-        sprite->atualizar(3, dt, olhandoEsquerda(), posicao);
+        sprite->atualiza(3, dt, olhandoEsquerda(), posicao);
     /* Pulando */
     else if (velocidade.y < -100 && !podePular)
-        sprite->atualizar(2, dt, olhandoEsquerda(), posicao);
+        sprite->atualiza(2, dt, olhandoEsquerda(), posicao);
     /* Andando */
     else if (abs(velocidade.x) > 0.001)
-        sprite->atualizar(1, dt, olhandoEsquerda(), posicao);
+        sprite->atualiza(1, dt, olhandoEsquerda(), posicao);
     /* Idle */
     else
-        sprite->atualizar(0, dt, olhandoEsquerda(), posicao);
+        sprite->atualiza(0, dt, olhandoEsquerda(), posicao);
 }
 
 void Jogador::reset() {

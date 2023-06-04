@@ -1,6 +1,6 @@
-#include "Mago.hpp"
+#include "../../../include/Personagem/Inimigo/Mago.hpp"
 
-#include "Animacao.hpp"
+#include "../../../include/Animacao/Animacao.hpp"
 #include <math.h>
 
 const float Mago::tempoAtaque = 0.3;
@@ -111,10 +111,10 @@ void Mago::atualizaSprite(float dt) {
     if (taAtacando) {
         tempoTotalAtaque += dt;
         if (tempoTotalAtaque < tempoAtaque)
-            sprite->atualizar(2, dt, olhandoEsquerda(), posicao);
+            sprite->atualiza(2, dt, olhandoEsquerda(), posicao);
         else
             ataque();
 
     } else
-        sprite->atualizar(0, dt, olhandoEsquerda(), posicao);
+        sprite->atualiza(0, dt, olhandoEsquerda(), posicao);
 }

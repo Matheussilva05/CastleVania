@@ -1,5 +1,5 @@
-#include "Entidade.hpp"
-#include "Animacao.hpp"
+#include "../../include/Personagem/Entidade.hpp"
+#include "../../include/Animacao/Animacao.hpp"
 
 
 

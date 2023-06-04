@@ -1,58 +1,107 @@
-#include "Jogo.hpp"
+#include "../include/Jogo.hpp"
 
 
 using namespace GE;
 
-Jogo::Jogo()
+    Jogo::Jogo()
 
-{
-    pEvento = GerenciadorEvento::getGerenciadorEvento();
-    pGrafico = GerenciadorGrafico::getGerenciadorGrafico();
+    {
+        pEvento = GerenciadorEvento::getGerenciadorEvento();
+        pGrafico = GerenciadorGrafico::getGerenciadorGrafico();
 
-    pInput = new GerenciadorInput;
-    pEvento->setGerenciadorInput(pInput);
+        pInput = new GerenciadorInput;
+        pEvento->setGerenciadorInput(pInput);
 
-    jogador1 = NULL;
-    jogador2 = NULL;
-    pNivel = NULL;
-    nivelAcabou = false;
+        jogador1 = NULL;
+        jogador2 = NULL;
+        pNivel = NULL;
+        nivelAcabou = false;
 
-    iniciarEstados();
-    Executar();
-}
+        iniciarEstados();
+        Executar();
+    }
 
-Jogo::~Jogo() {
+    Jogo::~Jogo() {
     if (pNivel != NULL)
         delete (pNivel);
     if (jogador1)
         delete (jogador1);
     if (jogador2)
         delete (jogador2);
+    }
+
+
+void Jogo::iniciarEstados() {
+    Estado* pNovoEstado = NULL;
+
+    try {
+        pNovoEstado = new MenuPrincipalState(pInput, this);
+        if (pNovoEstado == NULL)
+            throw 0;
+        vectorDeEstados.push_back(pNovoEstado);
+
+        pNovoEstado = new NovoJogoState(pInput, this);
+        if (pNovoEstado == NULL)
+            throw 0;
+        vectorDeEstados.push_back(pNovoEstado);
+
+        pNovoEstado = new JogandoJogoState(pInput, this);
+        if (pNovoEstado == NULL)
+            throw 0;
+        vectorDeEstados.push_back(pNovoEstado);
+
+        pNovoEstado = new MenuPausaState(pInput, this);
+        if (pNovoEstado == NULL)
+            throw 0;
+        vectorDeEstados.push_back(pNovoEstado);
+
+        pNovoEstado = new CarregaJogoState(pInput, this);
+        if (pNovoEstado == NULL)
+            throw 0;
+        vectorDeEstados.push_back(pNovoEstado);
+        /*
+        pNovoEstado = new PontuacaoState(pInput, this);
+        if (pNovoEstado == NULL)
+            throw 0;
+        vectorDeEstados.push_back(pNovoEstado);
+
+        pNovoEstado = new AcabaJogoState(pInput, this);
+        if (pNovoEstado == NULL)
+            throw 0;
+        vectorDeEstados.push_back(pNovoEstado);
+        */
+    } catch (int err) {
+        if (err == 0) {
+            cout << "Erro alocando estados " << endl;
+            exit(1);
+        }
+    }
+
+    mudarEstadoAtual(estadoID::menuPrincipal);
 }
 
-void Jogo::Executar() {
-    float dt;
-    time.restart();
+    void Jogo::Executar() {
+       float dt;
+       time.restart();
 
 
 
-    while (pGrafico->verificaJanelaAberta()) {
-        /* Olha se algum evento aconteceu */
+        while (pGrafico->verificaJanelaAberta()) {
+         /* Olha se algum evento aconteceu */
         pEvento->pollEventos();
-        /* Tempo desde o ultimo loop */
-        dt = time.getElapsedTime().asSeconds();
+         /* Tempo desde o ultimo loop */
+         dt = time.getElapsedTime().asSeconds();
         time.restart();
         if (dt > 0.1)
             dt = 0.1;
         /* Limpa tela e desenha de novo */
         pGrafico->clear();
         /* Chama estado novo e renderiza */
-        // execCurrentState(dt);
+         execEstadoAtual(dt);
         /* Mostra tudo desenhado */
-        pGrafico->mostraElemento();
+        pGrafico->display();
     }
 }
-
 
 void Jogo::save() {
     if (pNivel != NULL)

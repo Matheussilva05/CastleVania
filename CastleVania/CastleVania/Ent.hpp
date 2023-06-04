@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Id.hpp"
-#include "stdafx.h"
+#include "../Listas/Id.hpp"
+#include "../stdafx.h"
 
 
 
@@ -25,6 +25,6 @@ public:
 
     virtual void inicializaSprite() = 0;
     virtual void atualiza(float dt) = 0;
-    virtual void renderizar();
+    virtual void renderiza();
 };
 

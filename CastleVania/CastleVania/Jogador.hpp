@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Personagem.hpp"
-#include "ControleJogador.hpp"
+#include "../Personagem.hpp"
+#include "../../Gerenciador/ControleJogador.hpp"
 #include <math.h>
 
 #define JOGADOR_1_PATH "./imagens/SPRITES/Jogador/spritesheet/player.png"

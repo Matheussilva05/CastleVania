@@ -1,7 +1,7 @@
-#include "BolaDeFogo.hpp"
+#include "../../../include/Personagem/Inimigo/BolaDeFogo.hpp"
 
-#include "Animacao.hpp"
-#include "GerenciadorGrafico.hpp"
+#include "../../../include/Animacao/Animacao.hpp"
+#include "../../../include/Gerenciador/GerenciadorGrafico.hpp"
 
 BolaDeFogo::BolaDeFogo(sf::Vector2f pos) :
 Projetil(ID::boladefogo, pos, sf::Vector2f(BOLADEFOGO_LARGURA, BOLADEFOGO_ALTURA), BOLADEFOGO_DANO) {
@@ -16,7 +16,7 @@ void BolaDeFogo::atualiza(float dt) {
     if (getAparece()) {
         atualizaAtivo(dt);
         mudarPosicao(Vector2f(velocidade.x * dt + posicao.x, velocidade.y * dt + posicao.y));
-        sprite->atualizar(0, dt, olhandoEsquerda(), posicao);
+        sprite->atualiza(0, dt, olhandoEsquerda(), posicao);
     }
 }
 

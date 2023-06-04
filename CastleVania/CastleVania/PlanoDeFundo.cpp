@@ -1,6 +1,6 @@
-#include "PlanoDeFundo.hpp"
+#include "../../include/Nivel/PlanoDeFundo.hpp"
 
-#include "Animacao.hpp"
+#include "../../include/Animacao/Animacao.hpp"
 
 PlanoDeFundo::PlanoDeFundo(sf::Vector2f pos, const char* path) :
 Ent(ID::PlanoDeFundo, pos) {
@@ -13,7 +13,7 @@ PlanoDeFundo::~PlanoDeFundo() {
 void PlanoDeFundo::inicializaSprite() {
 }
 
-void PlanoDeFundo::renderizar() {
-    sprite->atualizar(0, 0, false, posicao);
-    sprite->renderizar();
+void PlanoDeFundo::renderiza() {
+    sprite->atualiza(0, 0, false, posicao);
+    sprite->renderiza();
 }

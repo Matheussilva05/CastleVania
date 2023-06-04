@@ -1,4 +1,4 @@
-#include "ListaEntidade.hpp"
+#include "..\..\include\Lista\ListaEntidade.hpp"
 
 namespace CastleVania {
 

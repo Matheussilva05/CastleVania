@@ -1,6 +1,6 @@
-#include "GerenciadorInput.hpp"
+#include "../../include/Gerenciador/GerenciadorInput.hpp"
 
-#include "Observador.hpp"
+#include "../../include/Gerenciador/Observador.hpp"
 
 GerenciadorInput::GerenciadorInput() {
 }

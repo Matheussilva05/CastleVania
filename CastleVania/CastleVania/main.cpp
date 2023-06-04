@@ -1,8 +1,8 @@
-#include "Jogo.hpp"
+#include "..\Include\Jogo.hpp"
 
 
 int main() {
+    cerr << "CHEGUEI ATÉ AQUI" << endl;
     GE::Jogo Castlevania;
     return 0;
 }
-//ola

@@ -1,4 +1,4 @@
-#include "EntidadeLista.hpp"
+#include "../../include/Listas/EntidadeLista.hpp"
 
 EntidadeLista::EntidadeLista() :
 list() {
@@ -17,13 +17,13 @@ void EntidadeLista::atualizaTudo(float dt) {
     }
 }
 
-/* Cicla a lista chamando a função de renderizar para cada elemento. */
+/* Cicla a lista chamando a função de renderiza para cada elemento. */
 void EntidadeLista::renderizaTudo() {
     Entidade* pAux;
     for (int i = 0; i < list.comprimento(); i++) {
         if (list[i]->getAparece()) {
             pAux = list[i];
-            pAux->renderizar();
+            pAux->renderiza();
         }
     }
 }

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Personagem.hpp"
-#include "Entidade.hpp"
+#include "../Personagem/Personagem.hpp"
+#include "../Personagem/Entidade.hpp"
 #include "Lista.hpp"
-#include "Obstaculo.hpp"
-#include "Projetil.hpp"
-#include "stdafx.h"
+#include "../Personagem/Obstaculo.hpp"
+#include "../Personagem/Projetil.hpp"
+#include "../stdafx.h"
 
 class EntidadeLista {
 private:

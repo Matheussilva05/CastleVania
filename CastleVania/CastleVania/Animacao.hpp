@@ -22,8 +22,8 @@ public:
 
     void inicializarTextura(const char* caminho, sf::Vector2u numeroImagem);
     void setnumeroImagem(const sf::Vector2u numeroImagem);
-    void renderizar();
-    void atualizar(int fileira, float dt, bool olhandoEsquerda, sf::Vector2f posicao);
+    void renderiza();
+    void atualiza(int fileira, float dt, bool olhandoEsquerda, sf::Vector2f posicao);
     void setGerenciadorGrafico(GerenciadorGrafico* pGeGra) { pGerenciadorG = pGeGra;}
     };
 

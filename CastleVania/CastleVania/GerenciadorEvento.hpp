@@ -2,7 +2,7 @@
 
 #include "GerenciadorGrafico.hpp"
 #include "GerenciadorInput.hpp"
-#include "stdafx.h"
+#include "../stdafx.h"
 
 class GerenciadorEvento {
 private:

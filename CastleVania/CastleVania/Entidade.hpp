@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Ent.hpp"
-#include "Id.hpp"
-#include "stdafx.h"
+#include "../Listas/Id.hpp"
+#include "../stdafx.h"
 
 class Animacao;
 class GerenciadorGrafico;

@@ -1,4 +1,4 @@
-#include "Projetil.hpp"
+#include "../../include/Personagem/Projetil.hpp"
 
 const float Projetil::maxTempoAtivo = 5.0;
 

@@ -1,4 +1,4 @@
-#include "Animacao.hpp"
+#include "../../include/Animacao/Animacao.hpp"
 
 #include <math.h>
 
@@ -36,7 +36,7 @@ void Animacao::inicializarTextura(const char* caminho,sf::Vector2u numeroImagem)
 }
 /* baseado nisto --> https://www.youtube.com/watch?v=Aa8bXSq5LDE&t=196s */
 /* Atualiza a animacao e a posicao  */
-void Animacao::atualizar(int fileira, float dt, bool olhandoEsquerda, sf::Vector2f posicao) {
+void Animacao::atualiza(int fileira, float dt, bool olhandoEsquerda, sf::Vector2f posicao) {
     if (imagemAtual.y != abs(fileira))
         imagemAtual.x = 0;
     imagemAtual.y = fileira;
@@ -70,7 +70,7 @@ void Animacao::setnumeroImagem(const sf::Vector2u numeroImagem) {
     this->numeroImagem = numeroImagem;
      }
 
-void Animacao::renderizar() {
+void Animacao::renderiza() {
     pGerenciadorG->desenhaElemento(&corpo);
       }
 

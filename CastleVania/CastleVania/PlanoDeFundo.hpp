@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Ent.hpp"
-#include "GerenciadorGrafico.hpp"
-#include "stdafx.h"
+#include "../Personagem/Ent.hpp"
+#include "../Gerenciador/GerenciadorGrafico.hpp"
+#include "../stdafx.h"
 
 class PlanoDeFundo : public Ent {
 public:
@@ -11,7 +11,7 @@ public:
     virtual ~PlanoDeFundo();
 
     void inicializaSprite();
-    void renderizar();
+    void renderiza();
     void atualiza(float dt) { }
 };
 
