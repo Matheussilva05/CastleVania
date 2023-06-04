@@ -1,5 +1,5 @@
-#include "../../include/Personagem/Ent.hpp"
-#include "../../include/Animacao/Animacao.hpp"
+#include "Ent.hpp"
+#include "Animacao.hpp"
 
 
 Ent::Ent(ID::ids id, sf::Vector2f pos) :
