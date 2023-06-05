@@ -2,10 +2,10 @@
 
 #include "Menu.hpp"
 #include "Estado.hpp"
-#include "../Nivel/ConstrutorNivel.hpp"
+#include "ConstrutorNivel.hpp"
 class GerenciadorInput;
 
-#define BACKGROUND_MAIN_MENU "./imagens/MAPA/menuprincipal.png"
+#define BACKGROUND_MAIN_MENU "CastleVania/imagens/MAPA/menuprincipal.png"
 
 namespace GE {
 

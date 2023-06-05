@@ -1,4 +1,4 @@
-#include "../../include/Nivel/Nivel.hpp"
+#include "Nivel.hpp"
 
 Nivel::Nivel(const char* path, Jogador* j1, Jogador* j2, sf::Vector2u nivelTamanho) :
 Ggrafico(GerenciadorGrafico::getGerenciadorGrafico()),
@@ -113,8 +113,8 @@ void Nivel::saveNvl() {
     }
 }
 
-//PATH_PLANODEFUNDO_PLACEHOLDER "./imagens/assets/environment/columns.png"
-//PATH_PLANODEFUNDO_CASTELO "./imagens/assets/environment/background.png"
+//PATH_PLANODEFUNDO_PLACEHOLDER "CastleVania/imagens/assets/environment/columns.png"
+//PATH_PLANODEFUNDO_CASTELO "CastleVania/imagens/assets/environment/background.png"
 
 int Nivel::getNumNivel() {
     if (!strcmp(path, PATH_PLANODEFUNDO_PLACEHOLDER))

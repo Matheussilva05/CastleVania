@@ -1,4 +1,4 @@
-#include "..\Include\Jogo.hpp"
+#include "Jogo.hpp"
 
 
 int main() {

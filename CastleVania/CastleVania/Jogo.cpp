@@ -1,4 +1,4 @@
-#include "../include/Jogo.hpp"
+#include "Jogo.hpp"
 
 
 using namespace GE;

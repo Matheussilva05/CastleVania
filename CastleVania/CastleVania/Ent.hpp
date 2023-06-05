@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Listas/Id.hpp"
-#include "../stdafx.h"
+#include "Id.hpp"
+#include "stdafx.h"
 
 
 

@@ -1,4 +1,4 @@
-#include "../../include/Gerenciador/GerenciadorEvento.hpp"
+#include "GerenciadorEvento.hpp"
 
 /* Padrao de projeto Singleton - Apenas uma instancia criada */
 GerenciadorEvento* GerenciadorEvento::instancia = NULL;

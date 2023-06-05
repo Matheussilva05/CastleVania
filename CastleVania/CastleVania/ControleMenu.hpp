@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../stdafx.h"
-#include "../Gerenciador/Observador.hpp"
+#include "stdafx.h"
+#include "Observador.hpp"
 
 class Menu;
 class GerenciadorInput;

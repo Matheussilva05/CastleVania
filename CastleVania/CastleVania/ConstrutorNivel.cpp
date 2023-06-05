@@ -1,4 +1,4 @@
-#include "../../include/Nivel/ConstrutorNivel.hpp"
+#include "ConstrutorNivel.hpp"
 ConstrutorNivel::ConstrutorNivel() {
     pJogador1 = NULL;
     pJogador2 = NULL;
@@ -102,8 +102,8 @@ void ConstrutorNivel::construirEspinho(sf::Vector2f pos) {
     nvl->addEntidade(espinho);
 }
 */
-//PATH_PLANODEFUNDO_PLACEHOLDER "./imagens/assets/environment/columns.png"
-//PATH_PLANODEFUNDO_CASTELO "./imagens/assets/environment/background.png"
+//PATH_PLANODEFUNDO_PLACEHOLDER "CastleVania/imagens/assets/environment/columns.png"
+//PATH_PLANODEFUNDO_CASTELO "CastleVania/imagens/assets/environment/background.png"
 
 Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2, int numnvl) {
     pJogador1 = j1;
@@ -114,10 +114,10 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
     srand(time(NULL));
     ifstream file;
     if (numnvl <= 1) {
-        file.open("./imagens/MAPA/PrimeiroNivel.txt");
+        file.open("CastleVania/imagens/MAPA/PrimeiroNivel.txt");
         nvl = new Nivel(PATH_PLANODEFUNDO_PLACEHOLDER, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     } else if (numnvl == 2) {
-        file.open("./imagens/MAPA/SegundoNivel.txt");
+        file.open("CastleVania/imagens/MAPA/SegundoNivel.txt");
         nvl = new Nivel(PATH_PLANODEFUNDO_CASTELO, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     }
     if (!file) {

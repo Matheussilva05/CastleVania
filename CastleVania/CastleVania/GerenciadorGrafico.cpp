@@ -1,4 +1,4 @@
-#include "..\..\include\Gerenciador\GerenciadorGrafico.hpp"
+#include "GerenciadorGrafico.hpp"
 
 
         GerenciadorGrafico* GerenciadorGrafico::pGrafico = nullptr;

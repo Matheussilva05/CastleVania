@@ -1,7 +1,7 @@
-#include "../../include/Estados/CarregaJogoState.hpp"
+#include "CarregaJogoState.hpp"
 
-#include "../../include/Jogo.hpp"
-#include "../../include/Nivel/Nivel.hpp"
+#include "Jogo.hpp"
+#include "Nivel.hpp"
 
 using namespace GE;
 

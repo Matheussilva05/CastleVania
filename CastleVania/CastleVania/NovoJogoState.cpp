@@ -1,5 +1,5 @@
-#include "../../include/Estados/NovoJogoState.hpp"
-#include "../../include/Jogo.hpp"
+#include "NovoJogoState.hpp"
+#include "Jogo.hpp"
 
 using namespace GE;
 

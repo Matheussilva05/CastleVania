@@ -1,18 +1,19 @@
 #pragma once
 
-#include "Listas/EntidadeLista.hpp"
-#include "Gerenciador/GerenciadorEvento.hpp"
-#include "Gerenciador/GerenciadorGrafico.hpp"
-#include "Gerenciador/GerenciadorInput.hpp"
+#include "EntidadeLista.hpp"
+#include "GerenciadorEvento.hpp"
+#include "GerenciadorGrafico.hpp"
+#include "GerenciadorInput.hpp"
 //#include "PontuacaoState.h"
-#include "Estados/CarregaJogoState.hpp"
+#include "CarregaJogoState.hpp"
 //#include "AcabaJogoState.h"
-#include "Estados/MenuPrincipalState.hpp"
-#include "Estados/ControleMenu.hpp"
-#include "Estados/NovoJogoState.hpp"
-#include "Estados/MenuPausaState.hpp"
-#include "Estados/JogandoJogoState.hpp"
-#include "Estados/GerenciadorEstado.hpp"
+#include "MenuPrincipalState.hpp"
+#include "ControleMenu.hpp"
+#include "NovoJogoState.hpp"
+#include "NovoJogoState.hpp"
+#include "MenuPausaState.hpp"
+#include "JogandoJogoState.hpp"
+#include "GerenciadorEstado.hpp"
 
 #include <SFML/Graphics.hpp>
 

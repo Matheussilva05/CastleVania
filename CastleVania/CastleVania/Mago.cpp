@@ -1,6 +1,6 @@
-#include "../../../include/Personagem/Inimigo/Mago.hpp"
+#include "Mago.hpp"
 
-#include "../../../include/Animacao/Animacao.hpp"
+#include "Animacao.hpp"
 #include <math.h>
 
 const float Mago::tempoAtaque = 0.3;

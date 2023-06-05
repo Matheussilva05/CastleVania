@@ -1,7 +1,7 @@
-#include "../../../include/Personagem/Inimigo/Inimigo.hpp"
+#include "Inimigo.hpp"
 
-#include "../../../include/Animacao/Animacao.hpp"
-#include "../../../include/Personagem/Jogador/Jogador.hpp"
+#include "Animacao.hpp"
+#include "Jogador.hpp"
 #include "math.h"
 
 Inimigo::Inimigo(ID::ids id, sf::Vector2f pos, sf::Vector2f hit, int vd, int dn, Jogador* pJogador1, Jogador* pJogador2) :

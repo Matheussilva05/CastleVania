@@ -1,7 +1,7 @@
-#include "../../include/Estados/ControleMenu.hpp"
+#include "ControleMenu.hpp"
 
-#include "../../include/Gerenciador/GerenciadorInput.hpp"
-#include "../../include/Estados/Menu.hpp"
+#include "GerenciadorInput.hpp"
+#include "Menu.hpp"
 
 ControleMenu::ControleMenu(GerenciadorInput* pGI, Menu* pM) :
 Observador(pGI),

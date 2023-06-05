@@ -1,13 +1,13 @@
 #pragma once
 
-#include "../Listas/EntidadeLista.hpp"
-#include "../Personagem/Jogador/Jogador.hpp"
+#include "EntidadeLista.hpp"
+#include "Jogador.hpp"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <map>
-#include "../stdafx.h"
+#include "stdafx.h"
 
-#define FONT_PATH "./imagens/fonte/minecraft-ten.ttf"
+#define FONT_PATH "CastleVania/imagens/fonte/minecraft-ten.ttf"
 
 
 

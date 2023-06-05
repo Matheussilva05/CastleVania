@@ -1,5 +1,5 @@
-#include "../../include/Gerenciador/GerenciadorColisao.hpp"
-#include "../../include/Personagem/Jogador/Jogador.hpp"
+#include "GerenciadorColisao.hpp"
+#include "Jogador.hpp"
 
 GerenciadorColisao::GerenciadorColisao(EntidadeLista* pLista):
 list(pLista) {

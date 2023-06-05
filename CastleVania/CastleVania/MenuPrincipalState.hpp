@@ -5,7 +5,7 @@
 
 class GerenciadorInput;
 
-#define BACKGROUND_MAIN_MENU "./imagens/MAPA/menuprincipal.png"
+#define BACKGROUND_MAIN_MENU "CastleVania/imagens/MAPA/menuprincipal.png"
 
 namespace GE {
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Personagem.hpp"
+#include "Personagem.hpp"
 #include "BolaDeFogo.hpp"
 
 

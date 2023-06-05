@@ -1,6 +1,6 @@
-#include "../../include/Nivel/PlanoDeFundo.hpp"
+#include "PlanoDeFundo.hpp"
 
-#include "../../include/Animacao/Animacao.hpp"
+#include "Animacao.hpp"
 
 PlanoDeFundo::PlanoDeFundo(sf::Vector2f pos, const char* path) :
 Ent(ID::PlanoDeFundo, pos) {

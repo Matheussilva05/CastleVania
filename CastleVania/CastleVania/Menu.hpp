@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Nivel/PlanoDeFundo.hpp"
+#include "PlanoDeFundo.hpp"
 #include "Botao.hpp"
 #include "ControleMenu.hpp"
 #include <vector>

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Listas/EntidadeLista.hpp"
-#include "../stdafx.h"
+#include "EntidadeLista.hpp"
+#include "stdafx.h"
 #include <math.h>
 
 

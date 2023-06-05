@@ -1,6 +1,6 @@
-#include "../../include/Estados/Botao.hpp"
+#include "Botao.hpp"
 
-#include "../../include/Animacao/Animacao.hpp"
+#include "Animacao.hpp"
 #include <math.h>
 #include <string.h>
 

@@ -1,16 +1,16 @@
 #pragma once
 
 #include "PlanoDeFundo.hpp"
-#include "../Gerenciador/GerenciadorColisao.hpp"
-#include "../Personagem/Entidade.hpp"
-#include "../Listas/EntidadeLista.hpp"
-#include "../Gerenciador/GerenciadorEvento.hpp"
-#include "../Gerenciador/GerenciadorGrafico.hpp"
-#include "../Personagem/Jogador/Jogador.hpp"
-#include "../stdafx.h"
+#include "GerenciadorColisao.hpp"
+#include "Entidade.hpp"
+#include "EntidadeLista.hpp"
+#include "GerenciadorEvento.hpp"
+#include "GerenciadorGrafico.hpp"
+#include "Jogador.hpp"
+#include "stdafx.h"
 
-#define PATH_PLANODEFUNDO_PLACEHOLDER "./imagens/assets/environment/columns.png"
-#define PATH_PLANODEFUNDO_CASTELO "./imagens/assets/environment/background.png"
+#define PATH_PLANODEFUNDO_PLACEHOLDER "CastleVania/imagens/assets/environment/columns.png"
+#define PATH_PLANODEFUNDO_CASTELO "CastleVania/imagens/assets/environment/background.png"
 
 class Nivel {
 private:

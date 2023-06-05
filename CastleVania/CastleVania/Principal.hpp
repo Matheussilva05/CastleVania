@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Personagem/Inimigo/Inimigo.hpp"
-#include "Personagem/Jogador/Jogador.hpp"
-#include "Listas/EntidadeLista.hpp"
-//#include "GerenciadorEventos.h"
-#include "Gerenciador/GerenciadorGrafico.hpp"
-#include "Gerenciador/GerenciadorInput.hpp"
+#include "Inimigo.hpp"
+#include "Jogador.hpp"
+#include "EntidadeLista.hpp"
+#include "GerenciadorEvento.hpp"
+#include "GerenciadorGrafico.hpp"
+#include "GerenciadorInput.hpp"
 //#include "EstadoPontuação.h"
 //#include "EstadoSave.h"
 //#include "EstadoMenu.h"
@@ -13,7 +13,7 @@
 //#include "EstadoNovoJogo.h"
 //#include "EstadoPauseMenu.h"
 //#include "EstadoJogando.h"
-//#include "GerenciadorEstado.h"
+#include "GerenciadorEstado.hpp"
 
 #include <SFML/Graphics.hpp>
 

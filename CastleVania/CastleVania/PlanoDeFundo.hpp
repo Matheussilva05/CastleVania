@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../Personagem/Ent.hpp"
-#include "../Gerenciador/GerenciadorGrafico.hpp"
-#include "../stdafx.h"
+#include "Ent.hpp"
+#include "GerenciadorGrafico.hpp"
+#include "stdafx.h"
 
 class PlanoDeFundo : public Ent {
 public:

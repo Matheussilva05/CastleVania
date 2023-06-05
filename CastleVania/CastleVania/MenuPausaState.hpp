@@ -5,7 +5,7 @@
 
 class GerenciadorInput;
 
-#define BACKGROUND_PATH "./imagens/assets/environment/background.png"
+#define BACKGROUND_PATH "CastleVania/imagens/assets/environment/background.png"
 
 namespace GE {
 

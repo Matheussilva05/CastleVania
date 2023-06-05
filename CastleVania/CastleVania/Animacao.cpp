@@ -1,4 +1,4 @@
-#include "../../include/Animacao/Animacao.hpp"
+#include "Animacao.hpp"
 
 #include <math.h>
 

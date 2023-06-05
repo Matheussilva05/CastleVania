@@ -1,6 +1,6 @@
-#include "../../include/Gerenciador/ControleJogador.hpp"
+#include "ControleJogador.hpp"
 
-#include "../../include/Personagem/Jogador/Jogador.hpp"
+#include "Jogador.hpp"
 
 ControleJogador::ControleJogador(GerenciadorInput* pGI, Jogador* pP) :
 Observador(pGI),

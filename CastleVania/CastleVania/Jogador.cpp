@@ -1,6 +1,6 @@
-#include "../../../include/Personagem/Jogador/Jogador.hpp"
-#include "../../../include/Animacao/Animacao.hpp"
-#include "../../../include/Gerenciador/GerenciadorEvento.hpp"
+#include "Jogador.hpp"
+#include "Animacao.hpp"
+#include "GerenciadorEvento.hpp"
 #include <math.h>
 
 

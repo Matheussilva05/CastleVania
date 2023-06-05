@@ -1,5 +1,5 @@
-#include "../../include/Estados/MenuPausaState.hpp"
-#include "../../include/Jogo.hpp"
+#include "MenuPausaState.hpp"
+#include "Jogo.hpp"
 
 using namespace GE;
 

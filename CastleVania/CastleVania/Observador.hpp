@@ -1,7 +1,7 @@
 #pragma once
 
 #include "GerenciadorInput.hpp"
-#include "../stdafx.h"
+#include "stdafx.h"
 
 class Observador {
 private:

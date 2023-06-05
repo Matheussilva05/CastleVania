@@ -1,6 +1,6 @@
-#include "../../include/Estados/Menu.hpp"
+#include "Menu.hpp"
 
-#include "../../include/Gerenciador/GerenciadorGrafico.hpp"
+#include "GerenciadorGrafico.hpp"
 
 Menu::Menu(GerenciadorInput* GI, const char* planoPath) :
 selecionado(0),

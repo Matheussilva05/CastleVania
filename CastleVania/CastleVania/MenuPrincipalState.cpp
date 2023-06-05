@@ -1,5 +1,5 @@
-#include "../../include/Estados/MenuPrincipalState.hpp"
-#include "../../include/Jogo.hpp"
+#include "MenuPrincipalState.hpp"
+#include "Jogo.hpp"
 
 using namespace GE;
 

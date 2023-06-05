@@ -1,7 +1,7 @@
-#include "../../../include/Personagem/Inimigo/BolaDeFogo.hpp"
+#include "BolaDeFogo.hpp"
 
-#include "../../../include/Animacao/Animacao.hpp"
-#include "../../../include/Gerenciador/GerenciadorGrafico.hpp"
+#include "Animacao.hpp"
+#include "GerenciadorGrafico.hpp"
 
 BolaDeFogo::BolaDeFogo(sf::Vector2f pos) :
 Projetil(ID::boladefogo, pos, sf::Vector2f(BOLADEFOGO_LARGURA, BOLADEFOGO_ALTURA), BOLADEFOGO_DANO) {

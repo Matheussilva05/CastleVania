@@ -1,10 +1,10 @@
 #pragma once
 
-#include "../../include/Personagem/Ent.hpp"
-#include "../../include/Gerenciador/GerenciadorGrafico.hpp"
-#include "../../include/stdafx.h"
+#include "Ent.hpp"
+#include "GerenciadorGrafico.hpp"
+#include "stdafx.h"
 
-#define BOTAO_PATH "./imagens/assets/images/botao.png"
+#define BOTAO_PATH "CastleVania/imagens/assets/images/botao.png"
 #define TEXT_SIZE 24
 
 class Botao : public Ent {

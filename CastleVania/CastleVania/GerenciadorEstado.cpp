@@ -1,6 +1,6 @@
-#include "../../include/Estados/Estado.hpp"
+#include "Estado.hpp"
 
-#include "../../include/Estados/GerenciadorEstado.hpp"
+#include "GerenciadorEstado.hpp"
 
 using namespace GE;
 

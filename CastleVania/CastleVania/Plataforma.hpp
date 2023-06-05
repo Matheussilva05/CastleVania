@@ -2,9 +2,9 @@
 
 #include "Obstaculo.hpp"
 
-#define PLATAFORMA_PATH_SUBIDA "./imagens/MAPA/tileset.png"
-#define PLATAFORMA_PATH_DESCIDA "./imagens/MAPA/tileset.png"
-#define PLATAFORMA_PATH_RETO "./imagens/MAPA/tileset.png"
+#define PLATAFORMA_PATH_SUBIDA "CastleVania/imagens/MAPA/tileset.png"
+#define PLATAFORMA_PATH_DESCIDA "CastleVania/imagens/MAPA/tileset.png"
+#define PLATAFORMA_PATH_RETO "CastleVania/imagens/MAPA/tileset.png"
 
 #define PLATAFORMA_LARGURA 225
 #define PLATAFORMA_ALTURA 45
