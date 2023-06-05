@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Gerenciador/GerenciadorGrafico.hpp"
-#include "../stdafx.h"
+#include "GerenciadorGrafico.hpp"
+#include "stdafx.h"
 
 
 class Animacao {

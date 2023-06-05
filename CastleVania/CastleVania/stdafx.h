@@ -102,3 +102,4 @@ using std::string;
 #define ESMAGADOR_LARGURA 220
 #define ESMAGADOR_ALTURA 45
 
+

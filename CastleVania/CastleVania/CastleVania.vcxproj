@@ -19,10 +19,67 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animacao.hpp" />
+    <ClInclude Include="BolaDeFogo.hpp" />
+    <ClInclude Include="Boss.hpp" />
+    <ClInclude Include="ConstrutorNivel.hpp" />
+    <ClInclude Include="ControleJogador.hpp" />
+    <ClInclude Include="Ent.hpp" />
+    <ClInclude Include="Entidade.hpp" />
+    <ClInclude Include="EntidadeLista.hpp" />
+    <ClInclude Include="Estado.hpp" />
+    <ClInclude Include="GerenciadorColisao.hpp" />
+    <ClInclude Include="GerenciadorEstado.hpp" />
+    <ClInclude Include="GerenciadorEvento.hpp" />
+    <ClInclude Include="GerenciadorGrafico.hpp" />
+    <ClInclude Include="GerenciadorInput.hpp" />
+    <ClInclude Include="Id.hpp" />
+    <ClInclude Include="Inimigo.hpp" />
+    <ClInclude Include="Jogador.hpp" />
     <ClInclude Include="Jogo.hpp" />
+    <ClInclude Include="Lista.hpp" />
+    <ClInclude Include="Mago.hpp" />
+    <ClInclude Include="Morcego.hpp" />
+    <ClInclude Include="Nivel.hpp" />
+    <ClInclude Include="Observador.hpp" />
+    <ClInclude Include="Obstaculo.hpp" />
+    <ClInclude Include="Personagem.hpp" />
+    <ClInclude Include="PlanoDeFundo.hpp" />
+    <ClInclude Include="Plataforma.hpp" />
+    <ClInclude Include="Principal.hpp" />
+    <ClInclude Include="Projetil.hpp" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animacao.cpp" />
+    <ClCompile Include="BolaDeFogo.cpp" />
+    <ClCompile Include="Boss.cpp" />
+    <ClCompile Include="ConstrutorNivel.cpp" />
+    <ClCompile Include="ControleJogador.cpp" />
+    <ClCompile Include="Ent.cpp" />
+    <ClCompile Include="Entidade.cpp" />
+    <ClCompile Include="EntidadeLista.cpp" />
+    <ClCompile Include="Estado.cpp" />
+    <ClCompile Include="GerenciadorColisao.cpp" />
+    <ClCompile Include="GerenciadorEstado.cpp" />
+    <ClCompile Include="GerenciadorEvento.cpp" />
+    <ClCompile Include="GerenciadorGrafico.cpp" />
+    <ClCompile Include="GerenciadorInput.cpp" />
+    <ClCompile Include="Inimigo.cpp" />
+    <ClCompile Include="Jogador.cpp" />
     <ClCompile Include="Jogo.cpp" />
+    <ClCompile Include="ListaEntidade.cpp" />
+    <ClCompile Include="Mago.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Morcego.cpp" />
+    <ClCompile Include="Nivel.cpp" />
+    <ClCompile Include="Observador.cpp" />
+    <ClCompile Include="Obstaculo.cpp" />
+    <ClCompile Include="Personagem.cpp" />
+    <ClCompile Include="PlanoDeFundo.cpp" />
+    <ClCompile Include="Plataforma.cpp" />
+    <ClCompile Include="Principal.cpp" />
+    <ClCompile Include="Projetil.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
