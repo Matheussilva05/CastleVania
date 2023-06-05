@@ -7,7 +7,7 @@
 #include <map>
 #include "stdafx.h"
 
-#define FONT_PATH "CastleVania/imagens/fonte/minecraft-ten.ttf"
+#define FONT_PATH "./imagens/fonte/04B_30__.ttf"
 
 
 

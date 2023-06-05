@@ -3,7 +3,7 @@
 
 class Animacao;
 
-#define PATH_BOLADEFOGO_TEXTURA "CastleVania/imagens/SPRITES/Efeitos/Boladefogo/fireball-spritesheet/BOLADEFOGO.png"
+#define PATH_BOLADEFOGO_TEXTURA "./imagens/SPRITES/Efeitos/Boladefogo/fireball-spritesheet/fireball.png"
 
 #define BOLADEFOGO_LARGURA 40
 #define BOLADEFOGO_ALTURA 24
