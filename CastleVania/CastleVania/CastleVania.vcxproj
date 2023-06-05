@@ -56,7 +56,6 @@
     <ClInclude Include="PlanoDeFundo.hpp" />
     <ClInclude Include="Plataforma.hpp" />
     <ClInclude Include="PontuacaoState.hpp" />
-    <ClInclude Include="Principal.hpp" />
     <ClInclude Include="Projetil.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
@@ -97,7 +96,6 @@
     <ClCompile Include="PlanoDeFundo.cpp" />
     <ClCompile Include="Plataforma.cpp" />
     <ClCompile Include="PontuacaoState.cpp" />
-    <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Projetil.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
