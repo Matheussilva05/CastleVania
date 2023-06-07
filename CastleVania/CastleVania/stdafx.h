@@ -58,7 +58,7 @@ using std::string;
 /* =================================================== */
 
 #define PLATAFORMA_LARGURA 225
-#define PLATAFORMA_ALTURA 45
+#define PLATAFORMA_ALTURA 100
 
 /* =================================================== */
 /*                      PAREDE                         */

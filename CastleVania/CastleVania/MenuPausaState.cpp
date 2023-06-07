@@ -12,7 +12,7 @@ pJogo(pJ) {
     Botao* bt = NULL;
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 - 80));
-    bt->setMensagem("RESUME JOGO");
+    bt->setMensagem("JOGAR");
     bt->seleciona(true);
     vectorBotao.push_back(bt);
 
@@ -21,7 +21,7 @@ pJogo(pJ) {
     vectorBotao.push_back(bt);
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 + 80));
-    bt->setMensagem("VOLTAR PARA O MENU");
+    bt->setMensagem("MENU");
     vectorBotao.push_back(bt);
 
     selecionado = 0;

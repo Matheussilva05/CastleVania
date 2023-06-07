@@ -4,8 +4,8 @@
 #include "ControleJogador.hpp"
 #include <math.h>
 
-#define JOGADOR_1_PATH "./imagens/SPRITES/Jogador/spritesheet/player.png"
-#define JOGADOR_2_PATH "./imagens/SPRITES/Jogador/spritesheet/player.png"
+#define JOGADOR_1_PATH "./imagens/SPRITES/Jogador/jog1Anda.png"
+#define JOGADOR_2_PATH "./imagens/SPRITES/Jogador/jog1Anda.png"
 
 #define JOGADOR_VELOCIDADE 600.f
 #define PULA_VELOCIDADE 3000.f
