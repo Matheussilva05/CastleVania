@@ -19,7 +19,7 @@ class GerenciadorGrafico;
             Personagem(ID::ids id, sf::Vector2f pos, sf::Vector2f hit, int vd, int auxdano);
             ~Personagem();
 
-            int ataque();
+            int ataca();
             void tomaDano(int auxdano);
 
             void setTaAtacando(const bool val = false) { taAtacando = val; }

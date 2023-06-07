@@ -20,7 +20,7 @@ void GerenciadorColisao::calculaColisao()
             ent1 = (*list)[i];
             ent2 = (*list)[j];
             if (ent1->getAparece() && ent2->getAparece()) {
-                bool ataqueP = ((ent1->getId() == ID::jogador && (ent2->getId() == ID::mago || ent2->getId() == ID::morcego || ent2->getId() == ID::boss)) || (ent2->getId() == ID::jogador && (ent1->getId() == ID::mago || ent1->getId() == ID::morcego || ent1->getId() == ID::boss)));
+                bool ataqueP = ((ent1->getId() == ID::jogador && (ent2->getId() == ID::mago || ent2->getId() == ID::ghoul || ent2->getId() == ID::boss)) || (ent2->getId() == ID::jogador && (ent1->getId() == ID::mago || ent1->getId() == ID::ghoul || ent1->getId() == ID::boss)));
 
                 float dy, dx, intersectaX, intersectaY;
                 dx = ent2->getPosicao().x - ent1->getPosicao().x;
@@ -35,7 +35,7 @@ void GerenciadorColisao::calculaColisao()
                 if (intersectaX < 0.0f && intersectaY < 0.0f) { //Condicao para colidir
                     if (ent1->getId() == ID::jogador || ent1->getId() == ID::jogador2) {
                         colidirJogador(ent1, ent2, dx, dy, intersectaX, intersectaY);
-                    } else if (ent1->getId() == ID::mago || ent1->getId() == ID::morcego || ent1->getId() == ID::boss) {
+                    } else if (ent1->getId() == ID::mago || ent1->getId() == ID::ghoul || ent1->getId() == ID::boss) {
                         colidirInimigo(ent1, ent2, dx, dy, intersectaX, intersectaY);
                     } else if (ent1->getId() == ID::boladefogo || ent1->getId() == ID::raio) {
                         colidirProjetil(ent1, ent2, dx, dy, intersectaX, intersectaY);
@@ -114,7 +114,7 @@ void GerenciadorColisao::colidirJogador(Entidade* ent1, Entidade* ent2, float dx
             emCima(ent1, ent2, intersectaX, dx);
         }
         break;
-    case ID::morcego:
+    case ID::ghoul:
         if (intersectaX > intersectaY) {
             andaX(ent1, ent2, intersectaX);
 
@@ -300,7 +300,7 @@ void GerenciadorColisao::colidirPlataforma(Entidade* ent1, Entidade* ent2, float
             }
         }
         break;
-    case ID::morcego:
+    case ID::ghoul:
         if (intersectaX > intersectaY) {
             andaX(ent1, ent2, intersectaX);
         } else {
@@ -333,21 +333,5 @@ void GerenciadorColisao::colidirPlataforma(Entidade* ent1, Entidade* ent2, float
     }
 }
 
-/* void GerenciadorColisao::Executar(){
-
-    * @ retorna void
-    * @ verifica se houve colisão entre os personagens com personagens e personagens com obstaculos
-    *
-
-   for(int i=0; i<listaPersonagem->getTamanho()-1; i++){
-    Entidade* entidade1 = listaPersonagem->operator[](i);
-    for(int j=i+1; j<listaPersonagem->getTamanho();j++){
-        Entidade* entidade2 = listaPersonagem->operator[](j);
-        sf::Vector2f vetorColisao = calculaColisao(entidade1, entidade2);
-        if(vetorColisao.x < 0.f && vetorColisao.y < 0.f){
-            entidade1->colisao(entidade2);
-        }
-    }
-   }*/
 
 

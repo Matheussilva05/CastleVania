@@ -38,13 +38,13 @@ using std::string;
 /* =================================================== */
 /*                       MAGO                          */
 /* =================================================== */
-#define MAGO_LARGURA 11
-#define MAGO_ALTURA 37
+#define MAGO_LARGURA 80
+#define MAGO_ALTURA 105
 /* =================================================== */
-/*                      MORCEGO                        */
+/*                      GHOUL                          */
 /* =================================================== */
-#define MORCEGO_LARGURA 13
-#define MORCEGO_ALTURA 41
+#define GHOUL_LARGURA 100
+#define GHOUL_ALTURA 165
 
 /* =================================================== */
 /*                      MAPA                           */
@@ -58,7 +58,7 @@ using std::string;
 /* =================================================== */
 
 #define PLATAFORMA_LARGURA 225
-#define PLATAFORMA_ALTURA 45
+#define PLATAFORMA_ALTURA 100
 
 /* =================================================== */
 /*                      PAREDE                         */

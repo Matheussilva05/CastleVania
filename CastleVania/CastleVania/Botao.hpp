@@ -5,6 +5,7 @@
 #include "stdafx.h"
 
 #define BOTAO_PATH "./imagens/assets/images/botao.png"
+
 #define TEXT_SIZE 24
 
 class Botao : public Ent {

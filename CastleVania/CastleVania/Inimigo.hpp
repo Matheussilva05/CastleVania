@@ -2,6 +2,7 @@
 
 #include "Personagem.hpp"
 #include "BolaDeFogo.hpp"
+#include "Raio.hpp"
 
 
 // usado p/ gerar números aleatórios
@@ -30,7 +31,6 @@ class Jogador;
                 virtual void inicializaSprite() = 0;
                 virtual void save() = 0;
                 Jogador* getJogadorProximo();
-                void colisao(Entidade* outro, sf::Vector2f direcao) ;
             };
 
 

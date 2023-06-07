@@ -9,7 +9,7 @@ colis(_lista),
 nivelMapaTamanho(nivelTamanho),
 back(sf::Vector2f(float(Ggrafico->getWindowSize().x / 2), float(Ggrafico->getWindowSize().y / 2)), path),
 chegouFinal(1000) {
-    strcpy_s(this->path, path);
+    strcpy(this->path, path);
     pGerenEvento = GerenciadorEvento::getGerenciadorEvento();
     nivelRodando = 1;
 
@@ -84,7 +84,7 @@ void Nivel::saveNvl() {
     ofstream nivel;
     nivel.open("./assets/Saves/Nivel.txt", ios::trunc);
     if (!nivel) {
-        cout << "ERROR TO OPEN FILE" << endl;
+        cout << "ERRO CARREGANDO NIVEL" << endl;
         abort();
     }
     nivel << path << ' ' << chegouFinal << endl;
@@ -94,7 +94,7 @@ void Nivel::saveNvl() {
     clean.close();
     clean.open("./assets/Saves/Mago.txt", ios::trunc);
     clean.close();
-    clean.open("./assets/Saves/Morcego.txt", ios::trunc);
+    clean.open("./assets/Saves/Ghoul.txt", ios::trunc);
     clean.close();
     clean.open("./assets/Saves/Parede.txt", ios::trunc);
     clean.close();
@@ -113,8 +113,8 @@ void Nivel::saveNvl() {
     }
 }
 
-//PATH_PLANODEFUNDO_PLACEHOLDER "./imagens/assets/environment/columns.png"
-//PATH_PLANODEFUNDO_CASTELO "./imagens/assets/environment/background.png"
+//PATH_PLANODEFUNDO_PLACEHOLDER "CastleVania/imagens/assets/environment/columns.png"
+//PATH_PLANODEFUNDO_CASTELO "CastleVania/imagens/assets/environment/background.png"
 
 int Nivel::getNumNivel() {
     if (!strcmp(path, PATH_PLANODEFUNDO_PLACEHOLDER))

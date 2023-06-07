@@ -44,41 +44,42 @@ void ConstrutorNivel::construirMago(sf::Vector2f pos) {
     nvl->addEntidade(mg);
 }
 
-void ConstrutorNivel::construirMago(sf::Vector2f pos, sf::Vector2f vel, sf::Vector2f posProj, sf::Vector2f velProj, int shomgng, int vida, int olhandoEsquerda, int minH, int maxH) {
+void ConstrutorNivel::construirMago(sf::Vector2f pos, sf::Vector2f vel, sf::Vector2f posProj, sf::Vector2f velProj, int aparece, int vida, int olhandoEsquerda, int minH, int maxH) {
     BolaDeFogo* bf = new BolaDeFogo(posProj);
     Mago* mg = new Mago(pos, bf, pJogador1, pJogador2, minH, maxH);
     nvl->addEntidade(bf);
     nvl->addEntidade(mg);
-    bf->setAparece(shomgng);
+    bf->setAparece(aparece);
     bf->setVelocidade(velProj);
     bf->mudarPosicao(posProj);
     mg->setVelocidade(vel);
     mg->setVida(vida);
     mg->setOlhandoEsquerda(olhandoEsquerda);
 }
-/*
-void ConstrutorNivel::construirMorcego(sf::Vector2f pos) {
-    Morcego* mor = new Morcego(pos, ar, pJogador1, pJogador2);
-    nvl->addEntidade(mor);
+
+void ConstrutorNivel::construirGhoul(sf::Vector2f pos) {
+    Ghoul* ghoul = new Ghoul(pos, pJogador1, pJogador2);
+    nvl->addEntidade(ghoul);
 }
 
-void ConstrutorNivel::construirMorcego(sf::Vector2f pos, sf::Vector2f vel, int vida, int olhandoEsquerda) {
-    Morcego* mor = new Morcego(pos, ar, pJogador1, pJogador2);
-    nvl->addEntidade(mor);
-    mor->setVelocidade(vel);
-    mor->setVida(vida);
-    mor->setOlhandoEsquerda(olhandoEsquerda);
+void ConstrutorNivel::construirGhoul(sf::Vector2f pos, int vida, int olhandoEsquerda) {
+    Ghoul* ghoul = new Ghoul(pos, pJogador1, pJogador2);
+    nvl->addEntidade(ghoul);
+    ghoul->setVida(vida);
+    ghoul->setOlhandoEsquerda(olhandoEsquerda);
 }
 
 void ConstrutorNivel::construirBoss(sf::Vector2f pos) {
-    Boss* boss = new Boss(pos, pJogador1, pJogador2);
+    Raio* raio = new Raio(pos);
+    Boss* boss = new Boss(pos, raio, pJogador1, pJogador2);
+    nvl->addEntidade(raio);
     nvl->addEntidade(boss);
 }
-void ConstrutorNivel::construirBoss(sf::Vector2f pos, sf::Vector2f vel, sf::Vector2f posProj, sf::Vector2f velProj, int shomgng, int vida, int olhandoEsquerda, int minH, int maxH) {
+void ConstrutorNivel::construirBoss(sf::Vector2f pos, sf::Vector2f vel, sf::Vector2f posProj, sf::Vector2f velProj, int aparece, int vida, int olhandoEsquerda, int minH, int maxH, int minD, int maxD) {
     Raio* raio = new Raio(posProj);
-    Boss* boss = new Boss(pos, bf, pJogador1, pJogador2, minH, maxH);
+    Boss* boss = new Boss(pos, raio, pJogador1, pJogador2, minH, maxH, minD, maxD);
     nvl->addEntidade(raio);
-    raio->setShomgng(shomgng);
+    raio->setAparece(aparece);
     raio->setVelocidade(velProj);
     raio->mudarPosicao(posProj);
     nvl->addEntidade(boss);
@@ -86,7 +87,7 @@ void ConstrutorNivel::construirBoss(sf::Vector2f pos, sf::Vector2f vel, sf::Vect
     boss->setVida(vida);
     boss->setOlhandoEsquerda(olhandoEsquerda);
 }
-
+/*
 void ConstrutorNivel::construirParede(sf::Vector2f pos, int type, bool olhaEsquerda) {
     Parede* parede = new Parede(pos, type, olhaEsquerda);
     nvl->addEntidade(parede);
@@ -114,10 +115,10 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
     srand(time(NULL));
     ifstream file;
     if (numnvl <= 1) {
-        file.open("./Saves/PrimeiroNivel.txt");
+        file.open("./mapa/PrimeiroNivel.txt");
         nvl = new Nivel(PATH_PLANODEFUNDO_PLACEHOLDER, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     } else if (numnvl == 2) {
-        file.open("./Saves/SegundoNivel.txt");
+        file.open("./mapa/SegundoNivel.txt");
         nvl = new Nivel(PATH_PLANODEFUNDO_CASTELO, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     }
     if (!file) {
@@ -140,25 +141,25 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
                     construirMago(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
                 } else if (nivel[i][j] == txt::jogador2) {
                     setJogador2(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
+                }else if (nivel[i][j] == txt::ghoul) {
+                    construirGhoul(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
                 }/* else if (nivel[i][j] == txt::paredeEsquerda) {
                     construirParede(sf::Vector2f(j * PLATAFORMA_LARGURA + (PLATAFORMA_LARGURA - PAREDE_LARGURA) / 2, i * PAREDE_ALTURA), numnvl, true);
                 } else if (nivel[i][j] == txt::paredeDireita) {
                     construirParede(sf::Vector2f(j * PLATAFORMA_LARGURA - (PLATAFORMA_LARGURA - PAREDE_LARGURA) / 2, i * PAREDE_ALTURA), numnvl, false);
-                } else if (nivel[i][j] == txt::morher) {
-                    construirMorcego(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                }  else if (nivel[i][j] == txt::esmagador) {
+                }   else if (nivel[i][j] == txt::esmagador) {
                     construirEsmagador(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
                 } else if (nivel[i][j] == txt::espinho) {
                     construirEspinho(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                } else if (nivel[i][j] == txt::espinhoRand) {
+                }*/ else if (nivel[i][j] == txt::ghoulRand) {
                     int random = rand() % 10;
                     if (random >= 5)
-                        construirMorcego(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
+                        construirGhoul(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
                 } else if (nivel[i][j] == txt::magoRand) {
                     int random = rand() % 10;
                     if (random >= 5)
                         construirMago(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                } else if (nivel[i][j] == txt::espinhoRand) {
+                }/* else if (nivel[i][j] == txt::espinhoRand) {
                     int random = rand() % 10;
                     if (random >= 5)
                         construirEspinho(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
@@ -166,9 +167,9 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
                     int random = rand() % 10;
                     if (random >= 5)
                         construirEsmagador(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                } else if (nivel[i][j] == txt::boss) {
+                }*/ else if (nivel[i][j] == txt::boss) {
                     construirBoss(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                } */else if (nivel[i][j] == txt::end) {
+                } else if (nivel[i][j] == txt::end) {
                     nvl->setFim(j * PLATAFORMA_LARGURA);
                 }
             }
@@ -203,7 +204,7 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
 
     sf::Vector2f pos;
     bool olhandoEsquerda;
-    bool shomgng;
+    bool aparece;
     sf::Vector2f posProj;
     sf::Vector2f velProj;
     sf::Vector2f vel;
@@ -276,15 +277,15 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
         construirEspinho(sf::Vector2f(pos.x, pos.y));
     Espinho.close(); */
 /* ************************************************************************* */
-/*
-    ifstream Morcego("./Saves/Morcego.txt");
-    if (!Morcego) {
+
+    ifstream Ghoul("./Saves/Ghoul.txt");
+    if (!Ghoul) {
         cout << "Erro ao abrir texto em CarregarMapa" << endl;
         exit(100);
     }
-    while (Morcego >> pos.x >> pos.y >> vel.x >> vel.y >> vida >> olhandoEsquerda)
-        construirMorcego(pos, vel, vida, olhandoEsquerda);
-    Morcego.close(); */
+    while (Ghoul >> pos.x >> pos.y >> vel.x >> vel.y >> vida >> olhandoEsquerda)
+        construirGhoul(pos, vida, olhandoEsquerda);
+    Ghoul.close();
 /* ************************************************************************* */
 
     ifstream Mago("./Saves/Mago.txt");
@@ -293,20 +294,20 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
         exit(100);
     }
     int minH, maxH;
-    while (Mago >> pos.x >> pos.y >> vel.x >> vel.y >> posProj.x >> posProj.y >> velProj.x >> velProj.y >> shomgng >> vida >> olhandoEsquerda >> minH >> maxH)
-        construirMago(pos, vel, posProj, velProj, shomgng, vida, olhandoEsquerda, minH, maxH);
+    while (Mago >> pos.x >> pos.y >> vel.x >> vel.y >> posProj.x >> posProj.y >> velProj.x >> velProj.y >> aparece >> vida >> olhandoEsquerda >> minH >> maxH)
+        construirMago(pos, vel, posProj, velProj, aparece, vida, olhandoEsquerda, minH, maxH);
     Mago.close();
 /* ************************************************************************* */
-/*
+
     ifstream Boss("./Saves/Boss.txt");
     if (!Boss) {
         cout << "Erro ao abrir texto em CarregarMapa" << endl;
         exit(100);
     }
-
-    if (Boss >> pos.x >> pos.y >> vel.x >> vel.y >> posProj.x >> posProj.y >> velProj.x >> velProj.y >> shomgng >> vida >> olhandoEsquerda >> minH >> maxH)
-        construirBoss(pos, vel, posProj, velProj, shomgng, vida, olhandoEsquerda, minH, maxH);
-    Boss.close(); */
+    int minD, maxD;
+    if (Boss >> pos.x >> pos.y >> vel.x >> vel.y >> posProj.x >> posProj.y >> velProj.x >> velProj.y >> aparece >> vida >> olhandoEsquerda >> minH >> maxH >> minD >> maxD)
+        construirBoss(pos, vel, posProj, velProj, aparece, vida, olhandoEsquerda, minH, maxH, minD, maxD);
+    Boss.close();
 /* ************************************************************************* */
 
     return nvl;

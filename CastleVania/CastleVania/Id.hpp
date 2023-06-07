@@ -9,7 +9,7 @@ enum ids {
     mago        = 3,
     boladefogo  = 4,
     parede      = 5,
-    morcego     = 6,
+    ghoul       = 6,
     boss        = 7,
     raio        = 8,
     espinho     = 9,

@@ -5,9 +5,9 @@
 
 const float Mago::tempoAtaque = 0.3;
 
-Mago::Mago(sf::Vector2f pos, BolaDeFogo* boladefogo, Jogador* pJogador1, Jogador* pJogador2, int minH, int maxH) :
+Mago::Mago(sf::Vector2f pos, BolaDeFogo* bfogo, Jogador* pJogador1, Jogador* pJogador2, int minH, int maxH) :
 Inimigo(ID::mago, pos, sf::Vector2f(MAGO_LARGURA, MAGO_ALTURA), MAGO_VIDA, MAGO_DANO, pJogador1, pJogador2),
-boladefogo(boladefogo) {
+boladefogo(bfogo) {
 
     inicializaSprite();
     setVelocidade(sf::Vector2f(0, MAGO_VELOCIDADE));
@@ -113,7 +113,7 @@ void Mago::atualizaSprite(float dt) {
         if (tempoTotalAtaque < tempoAtaque)
             sprite->atualiza(2, dt, olhandoEsquerda(), posicao);
         else
-            ataque();
+            ataca();
 
     } else
         sprite->atualiza(0, dt, olhandoEsquerda(), posicao);

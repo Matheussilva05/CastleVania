@@ -20,11 +20,11 @@ pJogo(pJ) {
     vectorBotao.push_back(bt);
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 + 160));
-    bt->setMensagem("CARREGAR_JOGO");
+    bt->setMensagem("CARREGAR");
     vectorBotao.push_back(bt);
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 + 240));
-    bt->setMensagem("LEADERBOARD");
+    bt->setMensagem("PLACAR");
     vectorBotao.push_back(bt);
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 + 320));

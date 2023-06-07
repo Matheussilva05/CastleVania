@@ -12,7 +12,7 @@
             // Nothing to do here
         }
 
-        int Personagem::ataque(){
+        int Personagem::ataca(){
             return dano;
         }
 

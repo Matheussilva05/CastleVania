@@ -4,16 +4,16 @@
 #include "ControleJogador.hpp"
 #include <math.h>
 
-#define JOGADOR_1_PATH "./imagens/SPRITES/Jogador/spritesheet/player.png"
-#define JOGADOR_2_PATH "./imagens/SPRITES/Jogador/spritesheet/player.png"
+#define JOGADOR_1_PATH "./imagens/SPRITES/Jogador/spritesheet/jogador.png"
+#define JOGADOR_2_PATH "./imagens/SPRITES/Jogador/spritesheet/jogador.png"
 
 #define JOGADOR_VELOCIDADE 600.f
 #define PULA_VELOCIDADE 3000.f
 #define JOGADOR_VIDA 400
 #define JOGADOR_DANO 25
-#define JOGADOR_LARGURA 46
+#define JOGADOR_LARGURA 60
 #define JOGADOR_ALTURA 105
-#define JOGADOR_PULA 200
+#define JOGADOR_PULA 220
 #define JOGADOR_ATACA 150
 
 class Animacao;
