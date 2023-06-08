@@ -24,6 +24,7 @@
     <ClInclude Include="BolaDeFogo.hpp" />
     <ClInclude Include="Boss.hpp" />
     <ClInclude Include="Botao.hpp" />
+    <ClInclude Include="parede.hpp" />
     <ClInclude Include="CarregaJogoState.hpp" />
     <ClInclude Include="ConstrutorNivel.hpp" />
     <ClInclude Include="ControleJogador.hpp" />
@@ -37,6 +38,7 @@
     <ClInclude Include="GerenciadorEvento.hpp" />
     <ClInclude Include="GerenciadorGrafico.hpp" />
     <ClInclude Include="GerenciadorInput.hpp" />
+    <ClInclude Include="Ghoul.hpp" />
     <ClInclude Include="Id.hpp" />
     <ClInclude Include="Inimigo.hpp" />
     <ClInclude Include="Jogador.hpp" />
@@ -57,6 +59,7 @@
     <ClInclude Include="Plataforma.hpp" />
     <ClInclude Include="PontuacaoState.hpp" />
     <ClInclude Include="Projetil.hpp" />
+    <ClInclude Include="Raio.hpp" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +81,7 @@
     <ClCompile Include="GerenciadorEvento.cpp" />
     <ClCompile Include="GerenciadorGrafico.cpp" />
     <ClCompile Include="GerenciadorInput.cpp" />
+    <ClCompile Include="Ghoul.cpp" />
     <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Jogador.cpp" />
     <ClCompile Include="JogandoJogoState.cpp" />
@@ -92,11 +96,13 @@
     <ClCompile Include="NovoJogoState.cpp" />
     <ClCompile Include="Observador.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
+    <ClCompile Include="parede.cpp" />
     <ClCompile Include="Personagem.cpp" />
     <ClCompile Include="PlanoDeFundo.cpp" />
     <ClCompile Include="Plataforma.cpp" />
     <ClCompile Include="PontuacaoState.cpp" />
     <ClCompile Include="Projetil.cpp" />
+    <ClCompile Include="Raio.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

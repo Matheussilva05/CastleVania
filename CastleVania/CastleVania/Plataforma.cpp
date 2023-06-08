@@ -5,8 +5,8 @@
 
 Plataforma::Plataforma(sf::Vector2f pos, int platTipo) :
    Obstaculo(pos, sf::Vector2f(PLATAFORMA_LARGURA, PLATAFORMA_ALTURA),0, ID::plataforma),
-platTipo(platTipo) {
-    inicializaSprite();
+   platTipo(platTipo) {
+   inicializaSprite();
 }
 
 Plataforma::~Plataforma() { }
