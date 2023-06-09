@@ -17,9 +17,9 @@ void Plataforma::atualiza(float dt) {
 
 void Plataforma::inicializaSprite() {
     if (platTipo == 1)
-        sprite->inicializarTextura(PLATAFORMA_PATH_SUBIDA, sf::Vector2u(1, 1));
+        sprite->inicializarTextura(PLATAFORMA_PATH_TERRA, sf::Vector2u(1, 1));
     else if (platTipo == 2)
-        sprite->inicializarTextura(PLATAFORMA_PATH_DESCIDA, sf::Vector2u(1, 1));
+        sprite->inicializarTextura(PLATAFORMA_PATH_TIJOLO, sf::Vector2u(1, 1));
     else
         sprite->inicializarTextura(PLATAFORMA_PATH_RETO, sf::Vector2u(1, 1));
 }

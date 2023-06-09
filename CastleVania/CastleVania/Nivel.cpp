@@ -82,7 +82,7 @@ void Nivel::centerView() {
 
 void Nivel::saveNvl() {
     ofstream nivel;
-    nivel.open("./assets/Saves/Nivel.txt", ios::trunc);
+    nivel.open("./Saves/Nivel.txt", ios::trunc);
     if (!nivel) {
         cout << "ERRO CARREGANDO NIVEL" << endl;
         abort();
@@ -104,7 +104,7 @@ void Nivel::saveNvl() {
     clean.close();
     clean.open("./assets/Saves/Espinho.txt", ios::trunc);
     clean.close();
-    clean.open("./assets/Saves/Esmagador.txt", ios::trunc);
+    clean.open("./assets/Saves/Teia.txt", ios::trunc);
     clean.close();
     clean.open("./assets/Saves/Boss.txt", ios::trunc);
     clean.close();
@@ -113,13 +113,11 @@ void Nivel::saveNvl() {
     }
 }
 
-//PATH_PLANODEFUNDO_PLACEHOLDER "CastleVania/imagens/assets/environment/columns.png"
-//PATH_PLANODEFUNDO_CASTELO "CastleVania/imagens/assets/environment/background.png"
 
 int Nivel::getNumNivel() {
-    if (!strcmp(path, PATH_PLANODEFUNDO_PLACEHOLDER))
+    if (!strcmp(path, PATH_PLANODEFUNDO_PRIMEIRONIVEL))
         return 1;
-    else if (!strcmp(path, PATH_PLANODEFUNDO_CASTELO))
+    else if (!strcmp(path, PATH_PLANODEFUNDO_SEGUNDONIVEL))
         return 2;
     return 0;
 }

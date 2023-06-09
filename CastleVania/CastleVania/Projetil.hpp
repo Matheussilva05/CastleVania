@@ -1,5 +1,5 @@
 #pragma once
-
+#include "stdafx.h"
 #include "Entidade.hpp"
 
 class Projetil : public Entidade{

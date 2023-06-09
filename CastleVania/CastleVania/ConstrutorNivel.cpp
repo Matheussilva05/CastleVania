@@ -87,24 +87,24 @@ void ConstrutorNivel::construirBoss(sf::Vector2f pos, sf::Vector2f vel, sf::Vect
     boss->setVida(vida);
     boss->setOlhandoEsquerda(olhandoEsquerda);
 }
-/*
-void ConstrutorNivel::construirParede(sf::Vector2f pos, int type, bool olhaEsquerda) {
-    Parede* parede = new Parede(pos, type, olhaEsquerda);
+
+void ConstrutorNivel::construirParede(sf::Vector2f pos, int tipo, bool olhaEsquerda) {
+    Parede* parede = new Parede(pos, tipo, olhaEsquerda);
     nvl->addEntidade(parede);
 }
 
-void ConstrutorNivel::construirEsmagador(sf::Vector2f pos) {
-    Esmagador* esmagador = new Esmagador(pos);
-    nvl->addEntidade(esmagador);
+void ConstrutorNivel::construirTeia(sf::Vector2f pos) {
+    Teia* teia = new Teia(pos);
+    nvl->addEntidade(teia);
 }
 
 void ConstrutorNivel::construirEspinho(sf::Vector2f pos) {
     Espinho* espinho = new Espinho(pos);
     nvl->addEntidade(espinho);
 }
-*/
-//PATH_PLANODEFUNDO_PLACEHOLDER "./imagens/assets/environment/columns.png"
-//PATH_PLANODEFUNDO_CASTELO "./imagens/assets/environment/background.png"
+
+#define PATH_PLANODEFUNDO_PRIMEIRONIVEL "./imagens/FundoNivelUm.png"
+#define PATH_PLANODEFUNDO_SEGUNDONIVEL "./imagens/FundoNivelDois.png"
 
 Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2, int numnvl) {
     pJogador1 = j1;
@@ -116,10 +116,10 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
     ifstream file;
     if (numnvl <= 1) {
         file.open("./mapa/PrimeiroNivel.txt");
-        nvl = new Nivel(PATH_PLANODEFUNDO_PLACEHOLDER, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
+        nvl = new Nivel(PATH_PLANODEFUNDO_PRIMEIRONIVEL, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     } else if (numnvl == 2) {
         file.open("./mapa/SegundoNivel.txt");
-        nvl = new Nivel(PATH_PLANODEFUNDO_CASTELO, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
+        nvl = new Nivel(PATH_PLANODEFUNDO_SEGUNDONIVEL, j1, j2, sf::Vector2u(80 * PLATAFORMA_LARGURA, 40 * PLATAFORMA_ALTURA));
     }
     if (!file) {
         cout << "Erro abrindo mapa no ConstrutorNivel" << endl;
@@ -141,17 +141,17 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
                     construirMago(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
                 } else if (nivel[i][j] == txt::jogador2) {
                     setJogador2(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                }else if (nivel[i][j] == txt::ghoul) {
+                } else if (nivel[i][j] == txt::ghoul) {
                     construirGhoul(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                }/* else if (nivel[i][j] == txt::paredeEsquerda) {
+                } else if (nivel[i][j] == txt::paredeEsquerda) {
                     construirParede(sf::Vector2f(j * PLATAFORMA_LARGURA + (PLATAFORMA_LARGURA - PAREDE_LARGURA) / 2, i * PAREDE_ALTURA), numnvl, true);
                 } else if (nivel[i][j] == txt::paredeDireita) {
                     construirParede(sf::Vector2f(j * PLATAFORMA_LARGURA - (PLATAFORMA_LARGURA - PAREDE_LARGURA) / 2, i * PAREDE_ALTURA), numnvl, false);
-                }   else if (nivel[i][j] == txt::esmagador) {
-                    construirEsmagador(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
+                } else if (nivel[i][j] == txt::teia) {
+                    construirTeia(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
                 } else if (nivel[i][j] == txt::espinho) {
                     construirEspinho(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                }*/ else if (nivel[i][j] == txt::ghoulRand) {
+                } else if (nivel[i][j] == txt::ghoulRand) {
                     int random = rand() % 10;
                     if (random >= 5)
                         construirGhoul(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
@@ -159,15 +159,15 @@ Nivel* ConstrutorNivel::construirMapa(const char* path, Jogador* j1, Jogador* j2
                     int random = rand() % 10;
                     if (random >= 5)
                         construirMago(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                }/* else if (nivel[i][j] == txt::espinhoRand) {
+                } else if (nivel[i][j] == txt::espinhoRand) {
                     int random = rand() % 10;
                     if (random >= 5)
                         construirEspinho(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                } else if (nivel[i][j] == txt::esmagadorRand) {
+                } else if (nivel[i][j] == txt::teiaRand) {
                     int random = rand() % 10;
                     if (random >= 5)
-                        construirEsmagador(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
-                }*/ else if (nivel[i][j] == txt::boss) {
+                        construirTeia(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
+                } else if (nivel[i][j] == txt::boss) {
                     construirBoss(sf::Vector2f(j * PLATAFORMA_LARGURA, i * PAREDE_ALTURA));
                 } else if (nivel[i][j] == txt::end) {
                     nvl->setFim(j * PLATAFORMA_LARGURA);
@@ -213,7 +213,7 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
 /* ************************************************************************* */
     ifstream Jogador1(("./Saves/Jogador1.txt"), ios::in);
     if (!Jogador1) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+        cout << "Erro ao abrir Jogador1 em CarregarMapa" << endl;
         exit(100);
     }
     Jogador1 >> pos.x >> pos.y >> vel.x >> vel.y >> vida >> pontos >> olhandoEsquerda;
@@ -225,7 +225,7 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
     if (j2 != NULL) {
         ifstream Jogador2(("./Saves/Jogador2.txt"), ios::in);
         if (!Jogador2) {
-            cout << "Erro ao abrir texto em CarregarMapa" << endl;
+            cout << "Erro ao abrir Jogador2 em CarregarMapa" << endl;
             exit(100);
         }
 
@@ -235,52 +235,52 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
     }
 /* ************************************************************************* */
 
-    int type;
+    int tipo;
     ifstream Plataforma(("./Saves/Plataforma.txt"), ios::in);
     if (!Plataforma) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+        cout << "Erro ao abrir Plataforma em CarregarMapa" << endl;
         exit(100);
     }
-    while (Plataforma >> pos.x >> pos.y >> type)
-        construirPlataforma(sf::Vector2f(pos.x, pos.y), type);
+    while (Plataforma >> pos.x >> pos.y >> tipo)
+        construirPlataforma(sf::Vector2f(pos.x, pos.y), tipo);
     Plataforma.close();
 /* ************************************************************************* */
-/*
+
     ifstream Parede(("./Saves/Parede.txt"), ios::in);
     if (!Parede) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+        cout << "Erro ao abrir parede em CarregarMapa" << endl;
         exit(100);
     }
 
-    while (Parede >> pos.x >> pos.y >> olhandoEsquerda >> type) {
-        construirParede(sf::Vector2f(pos.x, pos.y), type, olhandoEsquerda);
+    while (Parede >> pos.x >> pos.y >> olhandoEsquerda >> tipo) {
+        construirParede(sf::Vector2f(pos.x, pos.y), tipo, olhandoEsquerda);
     }
-    Parede.close(); */
+    Parede.close();
 /* ************************************************************************* */
-/*
-    ifstream Esmagador(("./Saves/Esmagador.txt"), ios::in);
-    if (!Esmagador) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+
+    ifstream Teia(("./Saves/Teia.txt"), ios::in);
+    if (!Teia) {
+        cout << "Erro ao abrir Teia em CarregarMapa" << endl;
         exit(100);
     }
-    while (Esmagador >> pos.x >> pos.y)
-        construirEsmagador(sf::Vector2f(pos.x, pos.y));
-    Esmagador.close(); */
+    while (Teia >> pos.x >> pos.y)
+        construirTeia(sf::Vector2f(pos.x, pos.y));
+    Teia.close();
 /* ************************************************************************* */
-/*
-    ifstream Espinho("./Saves/Espinho.txt"), ios::in);
+
+    ifstream Espinho(("./Saves/Espinho.txt"), ios::in);
     if (!Espinho) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+        cout << "Erro ao abrir espinho em CarregarMapa" << endl;
         exit(100);
     }
     while (Espinho >> pos.x >> pos.y)
         construirEspinho(sf::Vector2f(pos.x, pos.y));
-    Espinho.close(); */
+    Espinho.close();
 /* ************************************************************************* */
 
     ifstream Ghoul("./Saves/Ghoul.txt");
     if (!Ghoul) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+        cout << "Erro ao abrir Ghoul em CarregarMapa" << endl;
         exit(100);
     }
     while (Ghoul >> pos.x >> pos.y >> vel.x >> vel.y >> vida >> olhandoEsquerda)
@@ -290,7 +290,7 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
 
     ifstream Mago("./Saves/Mago.txt");
     if (!Mago) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+        cout << "Erro ao abrir Mago em CarregarMapa" << endl;
         exit(100);
     }
     int minH, maxH;
@@ -301,7 +301,7 @@ Nivel* ConstrutorNivel::carregarMapa(Jogador* j1, Jogador* j2) {
 
     ifstream Boss("./Saves/Boss.txt");
     if (!Boss) {
-        cout << "Erro ao abrir texto em CarregarMapa" << endl;
+        cout << "Erro ao abrir Boss em CarregarMapa" << endl;
         exit(100);
     }
     int minD, maxD;

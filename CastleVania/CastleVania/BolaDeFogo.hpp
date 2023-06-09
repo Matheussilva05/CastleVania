@@ -3,10 +3,10 @@
 
 class Animacao;
 
-#define PATH_BOLADEFOGO_TEXTURA "./imagens/SPRITES/Efeitos/Boladefogo/boladefogospritesheet.png"
+#define PATH_BOLADEFOGO_TEXTURA "./imagens/boladefogo.png"
 
-#define BOLADEFOGO_LARGURA 40
-#define BOLADEFOGO_ALTURA 24
+#define BOLADEFOGO_LARGURA 120
+#define BOLADEFOGO_ALTURA 72
 #define BOLADEFOGO_VELOCIDADEX 500
 #define BOLADEFOGO_HMAX 200
 #define BOLADEFOGO_DANO 100

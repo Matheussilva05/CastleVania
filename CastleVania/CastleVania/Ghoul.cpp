@@ -55,7 +55,7 @@ void Ghoul::comportamentoGhoul() {
 void Ghoul::save() {
     if (getAparece()) {
         ofstream file;
-        file.open("./assets/Saves/Ghoul.txt", ios::app);
+        file.open("./Saves/Ghoul.txt", ios::app);
         if (!file) {
             cout << "ERRO CARREGANDO GHOUL" << endl;
             abort();

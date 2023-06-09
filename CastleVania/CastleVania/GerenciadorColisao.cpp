@@ -137,10 +137,10 @@ void GerenciadorColisao::colidirJogador(Entidade* ent1, Entidade* ent2, float dx
         ataqueInimigo(ent2, ent1);
         break;
     case ID::espinho:
-        ent1->setVelocidade(ent1->getVelocidade() / (static_cast<Obstaculo*>(ent2)->getEfeito()));
-        break;
-    case ID::esmagador:
         (static_cast<Personagem*>(ent1))->tomaDano(static_cast<Obstaculo*>(ent2)->getEfeito());
+        break;
+    case ID::teia:
+        ent1->setVelocidade(ent1->getVelocidade() / (static_cast<Obstaculo*>(ent2)->getEfeito()));
         break;
     default:
         break;

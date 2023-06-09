@@ -11,12 +11,12 @@ pJogo(pJ) {
     Botao* bt = NULL;
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2));
-    bt->setMensagem("UM JOGADOR");
+    bt->setMensagem("1-JOGADOR");
     bt->seleciona(true);
     vectorBotao.push_back(bt);
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 + 80));
-    bt->setMensagem("DOIS JOGADORES");
+    bt->setMensagem("2-JOGADORES");
     vectorBotao.push_back(bt);
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 + 160));
@@ -77,11 +77,11 @@ void NovoJogoState::comecaNovoNivel(bool eUmJogador) {
 
     if (nivelAtual <= 1) {
         ConstrutorNivel* maker = new ConstrutorNivel();
-        pNivel = maker->construirMapa(PATH_PLANODEFUNDO_PLACEHOLDER, jogador1, jogador2, 1);
+        pNivel = maker->construirMapa(PATH_PLANODEFUNDO_PRIMEIRONIVEL, jogador1, jogador2, 1);
         delete (maker);
     } else if (nivelAtual == 2) {
         ConstrutorNivel* maker = new ConstrutorNivel();
-        pNivel = maker->construirMapa(PATH_PLANODEFUNDO_CASTELO, jogador1, jogador2, 2);
+        pNivel = maker->construirMapa(PATH_PLANODEFUNDO_SEGUNDONIVEL, jogador1, jogador2, 2);
         delete (maker);
     }
 

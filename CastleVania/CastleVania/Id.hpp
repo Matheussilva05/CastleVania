@@ -13,7 +13,7 @@ enum ids {
     boss        = 7,
     raio        = 8,
     espinho     = 9,
-    esmagador   = 10,
+    teia        = 10,
     botao       = 11,
     PlanoDeFundo = 12,
     fonte       = 14

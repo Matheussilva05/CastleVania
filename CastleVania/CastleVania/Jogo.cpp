@@ -59,17 +59,17 @@ void Jogo::iniciarEstados() {
         if (pNovoEstado == NULL)
             throw 0;
         vectorDeEstados.push_back(pNovoEstado);
-        /*
+
         pNovoEstado = new PontuacaoState(pInput, this);
         if (pNovoEstado == NULL)
             throw 0;
         vectorDeEstados.push_back(pNovoEstado);
 
-        pNovoEstado = new AcabaJogoState(pInput, this);
+        pNovoEstado = new AcabarJogoState(pInput, this);
         if (pNovoEstado == NULL)
             throw 0;
         vectorDeEstados.push_back(pNovoEstado);
-        */
+
     } catch (int err) {
         if (err == 0) {
             cout << "Erro alocando estados " << endl;

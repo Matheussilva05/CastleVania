@@ -2,9 +2,9 @@
 
 #include "Obstaculo.hpp"
 
-#define PLATAFORMA_PATH_SUBIDA "./imagens/MAPA/tileset.png"
-#define PLATAFORMA_PATH_DESCIDA "./imagens/MAPA/tileset.png"
-#define PLATAFORMA_PATH_RETO "./imagens/MAPA/tileset.png"
+#define PLATAFORMA_PATH_TERRA "./imagens/chaoprimeirafase.png"
+#define PLATAFORMA_PATH_TIJOLO "./imagens/chaosegundafase.png"
+#define PLATAFORMA_PATH_RETO "./imagens/chaoprimeirafase.png"
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-const float Jogador::tempoDeAtaque = 0.8;
+const float Jogador::tempoDeAtaque = 0.65;
 
 Jogador::Jogador(const bool eJogador1, GerenciadorInput* pGI) :
 Personagem(ID::jogador, sf::Vector2f(0, 0), sf::Vector2f(JOGADOR_LARGURA, JOGADOR_ALTURA), JOGADOR_VIDA, JOGADOR_DANO),
@@ -56,14 +56,12 @@ int Jogador::podeAtacar(float dt) {
     if (taAtacando) {
         tempoTotalAteAtaque += dt;
         if (tempoTotalAteAtaque < tempoDeAtaque) {
-            if (primeiroAtaque)
-                return 4;
-            else
-                return 5;
+            return 4;
         } else {
             primeiroAtaque = !primeiroAtaque;
             tempoTotalAteAtaque = 0;
         }
+
         taAtacando = false;
     }
     return 0;
@@ -126,7 +124,7 @@ void Jogador::save() {
     if (eJogador1()) {
         file.open("./Saves/Jogador1.txt");
         if (!file) {
-            cout << "ERROR TO OPEN FILE" << endl;
+            cout << "ERRO CARREGANDO JOGADOR" << endl;
             abort();
         }
         file << getPosicao().x << ' ' << getPosicao().y - 30 << ' ' << getVelocidade().x << ' ' << (int) getVelocidade().y << ' ' << getVida() << ' ' << pontos << ' ' << olhandoEsquerda() << endl;
@@ -134,7 +132,7 @@ void Jogador::save() {
     } else {
         file.open("./Saves/Jogador2.txt");
         if (!file) {
-            cout << "ERROR TO OPEN FILE" << endl;
+            cout << "ERRO CARREGANDO JOGADOR" << endl;
             abort();
         }
         file << getPosicao().x << ' ' << getPosicao().y - 30 << ' ' << getVelocidade().x << ' ' << (int) getVelocidade().y << ' ' << getVida() << ' ' << pontos << ' ' << olhandoEsquerda() << endl;

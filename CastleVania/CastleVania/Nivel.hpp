@@ -9,8 +9,8 @@
 #include "Jogador.hpp"
 #include "stdafx.h"
 
-#define PATH_PLANODEFUNDO_PLACEHOLDER "./imagens/assets/environment/background.png"
-#define PATH_PLANODEFUNDO_CASTELO "./imagens/assets/environment/background.png"
+#define PATH_PLANODEFUNDO_PRIMEIRONIVEL "./imagens/FundoNivelUm.png"
+#define PATH_PLANODEFUNDO_SEGUNDONIVEL "./imagens/FundoNivelDois.png"
 
 class Nivel {
 private:

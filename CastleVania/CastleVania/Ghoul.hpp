@@ -9,8 +9,7 @@ class Animacao;
 #define GHOUL_MOTIONX_MIN 100
 #define GHOUL_VIDA 1000
 #define GHOUL_DANO 20
-#define GHOUL_ATAQUEK 200
-#define GHOUL_ATAQUEX 100
+#define GHOUL_ATAQUEX 120
 
 class Ghoul : public Inimigo {
 private:

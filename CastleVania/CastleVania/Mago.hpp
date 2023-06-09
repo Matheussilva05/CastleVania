@@ -1,8 +1,8 @@
 #pragma once
 #include "Inimigo.hpp"
 
-#define Mago_PATH "./imagens/SPRITES/Mago/spritesheet/wizard.png"
-#define MAGO_VIDA 2000
+#define Mago_PATH "./imagens/mago.png"
+#define MAGO_VIDA 1200
 #define MAGO_DANO 25
 #define MAGO_VELOCIDADE 100
 #define MAX_VAR_ALTURA 200

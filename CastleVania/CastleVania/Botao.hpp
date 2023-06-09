@@ -4,7 +4,7 @@
 #include "GerenciadorGrafico.hpp"
 #include "stdafx.h"
 
-#define BOTAO_PATH "./imagens/assets/images/botao.png"
+#define BOTAO_PATH "./imagens/botao.png"
 
 #define TEXT_SIZE 24
 

@@ -5,17 +5,17 @@ class Animacao;
 class Jogador;
 
 #define BOSS_PATH "./imagens/anjo.png"
-#define BOSS_VELOCIDADE 100
+#define BOSS_VELOCIDADE 160
 #define BOSS_MOTIONX_MAX 500
 #define BOSS_MOTIONX_MIN 100
-#define BOSS_ALTURA 110
-#define BOSS_LARGURA 40
-#define BOSS_VIDA 2000
+#define BOSS_ALTURA 140
+#define BOSS_LARGURA 50
+#define BOSS_VIDA 8000
 #define BOSS_DANO 50
-#define BOSS_ATAQUEX 1000
-#define MAX_VAR_ALTURA_BOSS 400
-#define MAX_VAR_DISTANCIA_BOSS 400
-#define BOSS_RAIO_VELOCIDADE 800
+#define BOSS_ATAQUEX 300
+#define MAX_VAR_ALTURA_BOSS 200
+#define MAX_VAR_DISTANCIA_BOSS 200
+#define BOSS_RAIO_VELOCIDADE 600
 
 class Boss : public Inimigo {
 private:

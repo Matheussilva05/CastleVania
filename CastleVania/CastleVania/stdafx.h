@@ -38,8 +38,8 @@ using std::string;
 /* =================================================== */
 /*                       MAGO                          */
 /* =================================================== */
-#define MAGO_LARGURA 80
-#define MAGO_ALTURA 105
+#define MAGO_LARGURA 70
+#define MAGO_ALTURA 110
 /* =================================================== */
 /*                      GHOUL                          */
 /* =================================================== */
@@ -71,8 +71,8 @@ using std::string;
 /*                    BOLA DE FOGO                     */
 /* =================================================== */
 
-#define BOLA_DE_FOGO_LARGURA 40
-#define BOLA_DE_FOGO_ALTURA 24
+#define BOLADEFOGO_LARGURA 120
+#define BOLADEFOGO_ALTURA 72
 #define BOLA_DE_FOGO_VELOCIDADE 400
 #define BOLA_DE_FOGO_ALTURAMAX 200
 
@@ -96,10 +96,10 @@ using std::string;
 #define VELOCIDADE_RAIO 500
 #define RAIO_ALTURAMAX 300
 /* =================================================== */
-/*                     ESMAGADOR                       */
+/*                      TEIA                           */
 /* =================================================== */
 
-#define ESMAGADOR_LARGURA 220
-#define ESMAGADOR_ALTURA 45
+#define TEIA_LARGURA 225
+#define TEIA_ALTURA 45
 
 

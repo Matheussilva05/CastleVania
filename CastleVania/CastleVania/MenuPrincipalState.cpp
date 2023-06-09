@@ -28,7 +28,7 @@ pJogo(pJ) {
     vectorBotao.push_back(bt);
 
     bt = new Botao(sf::Vector2f(GG->getWindowSize().x / 2.0f, GG->getWindowSize().y / 2 + 320));
-    bt->setMensagem("FECHAR JOGO");
+    bt->setMensagem("FECHAR");
     vectorBotao.push_back(bt);
 
     max = 4;

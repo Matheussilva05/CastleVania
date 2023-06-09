@@ -5,7 +5,7 @@
 
 class GerenciadorInput;
 
-#define BACKGROUND_PATH "./imagens/assets/environment/background.png"
+#define BACKGROUND_PATH "./imagens/planodefundo.png"
 
 namespace GE {
 

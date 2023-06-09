@@ -5,10 +5,10 @@
 #include "PlanoDeFundo.hpp"
 #include "Boss.hpp"
 #include "BolaDeFogo.hpp"
-//#include "Esmagador.h"
+#include "Teia.hpp"
 #include "Plataforma.hpp"
-//#include "Espinho.h"
-//#include "Parede.h"
+#include "Espinho.hpp"
+#include "Parede.hpp"
 #include "Ghoul.hpp"
 #include "GerenciadorColisao.hpp"
 #include "Entidade.hpp"
@@ -27,17 +27,17 @@ class ConstrutorNivel {
         jogador2 = '2',
         ghoul = 'g',
         ghoulRand = 's',
-        mago = 'z',
+        mago = 'm',
         magoRand = 'c',
         boss = 'b',
         espinho = 'e',
         espinhoRand = 'q',
-        esmagador = 'v',
-        esmagadorRand = 'n',
+        teia = 't',
+        teiaRand = 'n',
         plataforma = 'p',
         paredeEsquerda = 'E',
         paredeDireita = 'D',
-        end = 'e' //Finaliza o nivel
+        end = 'f' //Finaliza o nivel
     };
 
 private:
@@ -55,7 +55,7 @@ private:
     void construirGhoul(sf::Vector2f pos);
     void construirGhoul(sf::Vector2f pos, int vida, int  olhandoEsquerda);
     void construirParede(sf::Vector2f pos, int tipo, bool olhaEsquerda);
-    void construirEsmagador(sf::Vector2f pos);
+    void construirTeia(sf::Vector2f pos);
     void construirEspinho(sf::Vector2f pos);
     void construirBoss(sf::Vector2f pos);
     void construirBoss(sf::Vector2f pos, sf::Vector2f vel, sf::Vector2f posProj, sf::Vector2f velProj, int aparece, int vida, int  olhandoEsquerda, int minH, int maxH, int minD, int maxD);

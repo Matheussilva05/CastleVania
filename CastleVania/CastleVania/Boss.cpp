@@ -1,7 +1,7 @@
 #include "Boss.hpp"
 #include "Animacao.hpp"
 
-const float Boss::tempoAtaque = 1.6;
+const float Boss::tempoAtaque = 0.7;
 
 Boss::Boss(sf::Vector2f pos, Raio* pRaio, Jogador* pJogador1, Jogador* pJogador2, int minH, int maxH, int minD, int maxD) :
 Inimigo(ID::boss, pos, sf::Vector2f(BOSS_LARGURA, BOSS_ALTURA), BOSS_VIDA, BOSS_DANO, pJogador1, pJogador2),
@@ -50,7 +50,7 @@ void Boss::atualiza(float dt) {
 
     if ((posicao.y > minHeight) && velocidade.y > 0)
         velocidade.y *= -1;
-    else if ((posicao.y < maxHeight) && velocidade.y < 0)
+    else if ((posicao.y <= maxHeight) && velocidade.y < 0)
         velocidade.y *= -1;
 
 
@@ -75,7 +75,7 @@ void Boss::atualiza(float dt) {
 void Boss::save() {
     if (getAparece()) {
         ofstream file;
-        file.open("./assets/Saves/Boss.txt", ios::app);
+        file.open("./Saves/Boss.txt", ios::app);
         if (!file) {
             cout << "ERRO CARREGANDO BOSS" << endl;
             abort();

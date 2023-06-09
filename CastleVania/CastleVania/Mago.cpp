@@ -3,7 +3,7 @@
 #include "Animacao.hpp"
 #include <math.h>
 
-const float Mago::tempoAtaque = 0.3;
+const float Mago::tempoAtaque = 0.4;
 
 Mago::Mago(sf::Vector2f pos, BolaDeFogo* bfogo, Jogador* pJogador1, Jogador* pJogador2, int minH, int maxH) :
 Inimigo(ID::mago, pos, sf::Vector2f(MAGO_LARGURA, MAGO_ALTURA), MAGO_VIDA, MAGO_DANO, pJogador1, pJogador2),
@@ -48,13 +48,13 @@ void Mago::atualiza(float dt) {
 
     /* Ataca se possivel */
     ataqueTempoDeEspera += dt;
-    if (ataqueTempoDeEspera >= tempoAtaque * 10 && !boladefogo->getAparece() && getAparece()) {
+    if (ataqueTempoDeEspera >= tempoAtaque * 5 && !boladefogo->getAparece() && getAparece()) {
         if (abs(getJogadorProximo()->getPosicao().x - posicao.x) <= MAGO_ATAQUEX) {
             taAtacando = true;
             if (getJogadorProximo()->getPosicao().x - posicao.x > 0) {
-                setOlhandoEsquerda(false);
-            } else
                 setOlhandoEsquerda(true);
+            } else
+                setOlhandoEsquerda(false);
             ataqueTempoDeEspera = 0;
         }
     }
@@ -73,12 +73,13 @@ void Mago::ataca() {
     vy = MAGO_BOLADEFOGO_VELOCIDADE * cos(teta);
 
     if (olhandoEsquerda()) {
-        boladefogo->atira(getPosicao() - sf::Vector2f(MAGO_LARGURA, 0), sf::Vector2f(-vx, vy));
-    } else {
         boladefogo->atira(getPosicao() + sf::Vector2f(MAGO_LARGURA, 0), sf::Vector2f(vx, vy));
+    } else {
+        boladefogo->atira(getPosicao() - sf::Vector2f(MAGO_LARGURA, 0), sf::Vector2f(-vx, vy));
     }
     setTaAtacando(false);
     tempoTotalAtaque = 0;
+
 }
 
 /* Salva mago e bola de fogo. */
@@ -113,6 +114,7 @@ void Mago::atualizaSprite(float dt) {
         if (tempoTotalAtaque < tempoAtaque)
             sprite->atualiza(2, dt, olhandoEsquerda(), posicao);
         else
+
             ataca();
 
     } else

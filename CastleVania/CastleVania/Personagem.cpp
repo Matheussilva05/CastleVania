@@ -9,7 +9,7 @@
         }
 
         Personagem::~Personagem(){
-            // Nothing to do here
+
         }
 
         int Personagem::ataca(){
