@@ -53,7 +53,7 @@ void AcabarJogoState::renderiza() {
 void AcabarJogoState::resetEstado() {
     pGI->deleteString();
     apelido.clear();
-    strcpy(nomeJ, "");
+    strcpy_s(nomeJ, "");
 }
 
 void AcabarJogoState::exec() {
@@ -82,7 +82,7 @@ void AcabarJogoState::salvaPontos() {
         return;
 
     std::string s1 = apelido;
-    strcpy(nomeJ, "-");
+    strcpy_s(nomeJ, "-");
     for (int i = 0; s1[i] != 32 && s1[i] != 0 && s1[i] != 13; i++)
         nomeJ[i + 1] = s1[i];
 
@@ -110,17 +110,17 @@ void AcabarJogoState::salvaPontos() {
     }
     if (pontos[pos] <= pontosP) {
         pontos[pos] = pontosP;
-        strcpy(names[pos], nomeJ);
+        strcpy_s(names[pos], nomeJ);
     }
     char aux[30];
     for (i = 0; i < 10; i++) {
         for (int j = i + 1; j < 10; j++) {
             if (pontos[j] > pontos[i]) {
-                strcpy(aux, names[j]);
+                strcpy_s(aux, names[j]);
                 int ptaux = pontos[j];
-                strcpy(names[j], names[i]);
+                strcpy_s(names[j], names[i]);
                 pontos[j] = pontos[i];
-                strcpy(names[i], aux);
+                strcpy_s(names[i], aux);
                 pontos[i] = ptaux;
             }
         }

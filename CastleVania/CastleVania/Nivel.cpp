@@ -9,7 +9,7 @@ colis(_lista),
 nivelMapaTamanho(nivelTamanho),
 back(sf::Vector2f(float(Ggrafico->getWindowSize().x / 2), float(Ggrafico->getWindowSize().y / 2)), path),
 chegouFinal(1000) {
-    strcpy(this->path, path);
+    strcpy_s(this->path, path);
     pGerenEvento = GerenciadorEvento::getGerenciadorEvento();
     nivelRodando = 1;
 

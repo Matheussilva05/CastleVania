@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AcabarJogorState.hpp" />
+    <ClInclude Include="AcabarJogoState.hpp" />
     <ClInclude Include="Animacao.hpp" />
     <ClInclude Include="BolaDeFogo.hpp" />
     <ClInclude Include="Boss.hpp" />
@@ -31,12 +32,14 @@
     <ClInclude Include="Ent.hpp" />
     <ClInclude Include="Entidade.hpp" />
     <ClInclude Include="EntidadeLista.hpp" />
+    <ClInclude Include="Espinho.hpp" />
     <ClInclude Include="Estado.hpp" />
     <ClInclude Include="GerenciadorColisao.hpp" />
     <ClInclude Include="GerenciadorEstado.hpp" />
     <ClInclude Include="GerenciadorEvento.hpp" />
     <ClInclude Include="GerenciadorGrafico.hpp" />
     <ClInclude Include="GerenciadorInput.hpp" />
+    <ClInclude Include="Ghoul.hpp" />
     <ClInclude Include="Id.hpp" />
     <ClInclude Include="Inimigo.hpp" />
     <ClInclude Include="Jogador.hpp" />
@@ -47,17 +50,19 @@
     <ClInclude Include="Menu.hpp" />
     <ClInclude Include="MenuPausaState.hpp" />
     <ClInclude Include="MenuPrincipalState.hpp" />
-    <ClInclude Include="Morcego.hpp" />
     <ClInclude Include="Nivel.hpp" />
     <ClInclude Include="NovoJogoState.hpp" />
     <ClInclude Include="Observador.hpp" />
     <ClInclude Include="Obstaculo.hpp" />
+    <ClInclude Include="Parede.hpp" />
     <ClInclude Include="Personagem.hpp" />
     <ClInclude Include="PlanoDeFundo.hpp" />
     <ClInclude Include="Plataforma.hpp" />
     <ClInclude Include="PontuacaoState.hpp" />
     <ClInclude Include="Projetil.hpp" />
+    <ClInclude Include="Raio.hpp" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Teia.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AcabarJogoState.cpp" />
@@ -72,12 +77,14 @@
     <ClCompile Include="Ent.cpp" />
     <ClCompile Include="Entidade.cpp" />
     <ClCompile Include="EntidadeLista.cpp" />
+    <ClCompile Include="Espinho.cpp" />
     <ClCompile Include="Estado.cpp" />
     <ClCompile Include="GerenciadorColisao.cpp" />
     <ClCompile Include="GerenciadorEstado.cpp" />
     <ClCompile Include="GerenciadorEvento.cpp" />
     <ClCompile Include="GerenciadorGrafico.cpp" />
     <ClCompile Include="GerenciadorInput.cpp" />
+    <ClCompile Include="Ghoul.cpp" />
     <ClCompile Include="Inimigo.cpp" />
     <ClCompile Include="Jogador.cpp" />
     <ClCompile Include="JogandoJogoState.cpp" />
@@ -87,16 +94,18 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuPausaState.cpp" />
     <ClCompile Include="MenuPrincipalState.cpp" />
-    <ClCompile Include="Morcego.cpp" />
     <ClCompile Include="Nivel.cpp" />
     <ClCompile Include="NovoJogoState.cpp" />
     <ClCompile Include="Observador.cpp" />
     <ClCompile Include="Obstaculo.cpp" />
+    <ClCompile Include="Parede.cpp" />
     <ClCompile Include="Personagem.cpp" />
     <ClCompile Include="PlanoDeFundo.cpp" />
     <ClCompile Include="Plataforma.cpp" />
     <ClCompile Include="PontuacaoState.cpp" />
     <ClCompile Include="Projetil.cpp" />
+    <ClCompile Include="Raio.cpp" />
+    <ClCompile Include="Teia.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
