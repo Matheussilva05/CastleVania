@@ -1,4 +1,0 @@
-Legendas- 
-Agregação forte = Verde
-Associação = Azul
-Herança = Roxo/Vermelho
